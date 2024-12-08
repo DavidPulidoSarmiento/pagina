@@ -1,0 +1,41 @@
+:root{
+	--primary-gray-color: #606f7b;
+	--secondary-gray-color: #F3F6F9;
+	--tertiary-gray-color: #DAE2E8;
+	--disabled-gray-color: #B8BFC4;
+}
+body, td, span, p, div, h4{
+    font-family: leelawadee, sans-serif;
+}
+.etiqueta{
+	margin:1px;
+	font-weight: bold;		
+	color: var(--primary-gray-color);
+}
+.conScroll{
+  overflow-x: hidden;
+  height: 90vh;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--secondary-gray-color);
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--disabled-gray-color);
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-gray-color);
+  }
+}
+
+@media print {  
+	a[href]:after {
+		content: none !important;
+	}
+	.no-imprimible{
+		display: none !important;
+	}  
+}

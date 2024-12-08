@@ -1,0 +1,697 @@
+<html lang="es"><head><script type="text/javascript">
+	var afterLogin = "/encuestas/encuestaSatisfaccion_min.jsp?898222542=132458392";
+</script>
+
+
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- La informaciÃ³n debe sustituirse por la que corresponda a la pÃ¡gina o portal. Solo debe ser modificado si es necesario. -->
+	<meta name="description" content="InstituciÃ³n de EducaciÃ³n Superior acreditada por alta calidad ubicada en la ciudad de Santa Marta, Magdalena">
+    <meta name="keywords" content="Unimagdalena, Universidad del Magdalena, Magdalena, IES, alta calidad, Santa Marta, Educacion Superior, Unimag, Inscripciones Unimag, admisiones unimag, admisiones unimagdalena, estudiantes unimagdalena, oferta academica universidad del magdalena, AyRE">
+    <meta name="author" content="Centro de InvestigaciÃ³n y Desarrollo de Software CIDS, Unimagdalena">
+    <meta name="copyright" content="Universidad del Magdalena, CIDS">
+    <meta property="og:title" content="PÃ¡gina del Grupo de Admisiones, Registro y Control AcadÃ©mico de la Universidad del Magdalena">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://admisiones.unimagdalena.edu.co">
+    <meta property="og:image" content="https://cdn.unimagdalena.edu.co/images/escudo/bg_light/128.png">
+    <meta property="og:description" content="InstituciÃ³n de EducaciÃ³n Superior acreditada por alta calidad ubicada en la ciudad de Santa Marta, Magdalena">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Universidad del Magdalena">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blue">
+    <meta name="apple-mobile-web-app-title" content="Unimagdalena">
+    <link rel="icon" sizes="192x192" href="https://cdn.unimagdalena.edu.co/images/escudo/bg_light/192.png">
+    <link rel="apple-touch-icon" href="https://cdn.unimagdalena.edu.co/images/escudo/bg_light/192.png">
+    <meta name="msapplication-TileImage" content="https://cdn.unimagdalena.edu.co/images/escudo/bg_light/144.png">
+    <meta name="msapplication-TileColor" content="#004A87">
+    <meta name="theme-color" content="#004A87">
+    <link rel="shortcut icon" href="https://cdn.unimagdalena.edu.co/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://cdn.unimagdalena.edu.co/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.unimagdalena.edu.co/code/css/normalize.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/edu/css/bootstrap.min.UM.css" type="text/css">
+    <link href="https://cdn.unimagdalena.edu.co/code/css/public_768.min.css" rel="stylesheet" media="(min-width: 768px)">
+    <link href="https://cdn.unimagdalena.edu.co/code/css/public_992.min.css" rel="stylesheet" media="(min-width: 992px)">
+    <link href="https://cdn.unimagdalena.edu.co/code/css/public_1200.min.css" rel="stylesheet" media="(min-width: 1200px)">
+    <link href="https://cdn.unimagdalena.edu.co/code/css/public_1600.min.css" rel="stylesheet" media="(min-width: 1600px)">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+	<link href="/edu/css/estilos.css" rel="stylesheet" type="text/css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle">
+  video {
+    filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQgaUFyZ3NbMV07Cgpjb25zdCBmbG9hdCBFUFNJT04gPSAwLjE7CmNvbnN0IGZsb2F0IFZfTUlOID0gMDsKY29uc3QgZmxvYXQgVl9MT1cgPSAwLjI1Owpjb25zdCBmbG9hdCBWX01FRCA9IDAuNTsKY29uc3QgZmxvYXQgVl9ISUdIID0gMC43NTsKY29uc3QgZmxvYXQgVl9NQVggPSAxOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmZsb2F0MyBwaXhlbChpbnQgeCwgaW50IHksIGZsb2F0MiB4eSkgewogICAgcmV0dXJuIGlDaHVuay5ldmFsKHh5ICsgZmxvYXQyKHgsIHkpKS5yZ2I7Cn0KCmZsb2F0MyBzaGFycGVuKGZsb2F0MiB4eSkgewogICAgZmxvYXQzIGYgPQogICAgICAgIHBpeGVsKC0xLCAtMSwgeHkpICogIDEgKwogICAgICAgIHBpeGVsKCAwLCAtMSwgeHkpICogLTEgKwogICAgICAgIHBpeGVsKCAxLCAtMSwgeHkpICogIDEgKwoKICAgICAgICBwaXhlbCgtMSwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMCwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMSwgMCwgeHkpICogLTEgICsKCiAgICAgICAgcGl4ZWwoLTEsIDEsIHh5KSAqIDEgICArCiAgICAgICAgcGl4ZWwoIDAsIDEsIHh5KSAqIC0xICArCiAgICAgICAgcGl4ZWwoIDEsIDEsIHh5KSAqIDE7CiAgICByZXR1cm4gZiAvIC0xOwp9CgpmbG9hdDQgUkdYMihmbG9hdDIgeHkpIHsKICAgIGZsb2F0NCBjb2xvciA9IGlDaHVuay5ldmFsKHh5KTsKCiAgICBpZiAoaUNodW5rU2l6ZS54ICogaUNodW5rU2l6ZS55IDwgTUlOX0FSRUEpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKGlDaHVua1NpemUueSA8IE1JTl9TVFJJUCB8fCBpQ2h1bmtTaXplLnggPCBNSU5fU1RSSVApIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKHh5LnggPCBNQVJHSU4gfHwgeHkueCA+IChpQ2h1bmtTaXplLnggLSBNQVJHSU4pIHx8CiAgICAgICAgeHkueSA8IE1BUkdJTiB8fCB4eS55ID4gKGlDaHVua1NpemUueSAtIE1BUkdJTikpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgcmV0dXJuIGZsb2F0NChzaGFycGVuKHh5KSwgMSk7Cn0KCmZsb2F0IG1pbjMoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgeikgewogICAgcmV0dXJuIG1pbih4LCBtaW4oeSwgeikpOwp9CgpmbG9hdCBtYXgzKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHopIHsKICAgIHJldHVybiBtYXgoeCwgbWF4KHksIHopKTsKfQoKZmxvYXQgcmNwKGZsb2F0IHYpIHsKICAgIHJldHVybiAxIC8gdjsKfQoKZmxvYXQzIFJHWDMoZmxvYXQyIHh5LCBmbG9hdCBzdHJlbmd0aCkgewogICAgZmxvYXQzIGEgPSBwaXhlbCgtMSwgLTEsIHh5KTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoIDAsIC0xLCB4eSk7CiAgICBmbG9hdDMgYyA9IHBpeGVsKCAxLCAtMSwgeHkpOwoKICAgIGZsb2F0MyBkID0gcGl4ZWwoLTEsIDAsIHh5KTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoIDAsIDAsIHh5KTsKICAgIGZsb2F0MyBmID0gcGl4ZWwoIDEsIDAsIHh5KTsKCiAgICBmbG9hdDMgZyA9IHBpeGVsKC0xLCAxLCB4eSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKCAwLCAxLCB4eSk7CiAgICBmbG9hdDMgaSA9IHBpeGVsKCAxLCAxLCB4eSk7CgogICAgZmxvYXQgbW5SID0gbWluMyhtaW4zKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBtbkcgPSBtaW4zKG1pbjMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG1uQiA9IG1pbjMobWluMyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG1uUjIgPSBtaW4zKG1pbjMobW5SLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG1uRzIgPSBtaW4zKG1pbjMobW5HLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG1uQjIgPSBtaW4zKG1pbjMobW5CLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBtblIgPSBtblIgKyBtblIyOwogICAgbW5HID0gbW5HICsgbW5HMjsKICAgIG1uQiA9IG1uQiArIG1uQjI7CgogICAgZmxvYXQgbXhSID0gbWF4MyhtYXgzKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBteEcgPSBtYXgzKG1heDMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG14QiA9IG1heDMobWF4MyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG14UjIgPSBtYXgzKG1heDMobXhSLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG14RzIgPSBtYXgzKG1heDMobXhHLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG14QjIgPSBtYXgzKG1heDMobXhCLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBteFIgPSBteFIgKyBteFIyOwogICAgbXhHID0gbXhHICsgbXhHMjsKICAgIG14QiA9IG14QiArIG14QjI7CgogICAgZmxvYXQgcmNwTVIgPSByY3AobXhSKTsKICAgIGZsb2F0IHJjcE1HID0gcmNwKG14Ryk7CiAgICBmbG9hdCByY3BNQiA9IHJjcChteEIpOwoKICAgIGZsb2F0IGFtcFIgPSBzYXR1cmF0ZShtaW4obW5SLCAyIC0gbXhSKSAqIHJjcE1SKTsKICAgIGZsb2F0IGFtcEcgPSBzYXR1cmF0ZShtaW4obW5HLCAyIC0gbXhHKSAqIHJjcE1HKTsKICAgIGZsb2F0IGFtcEIgPSBzYXR1cmF0ZShtaW4obW5CLCAyIC0gbXhCKSAqIHJjcE1CKTsKCiAgICBhbXBSID0gc3FydChhbXBSKTsKICAgIGFtcEcgPSBzcXJ0KGFtcEcpOwogICAgYW1wQiA9IHNxcnQoYW1wQik7CgogICAgZmxvYXQgcGVhayA9IC1yY3AobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQgd1IgPSBhbXBSICogcGVhazsKICAgIGZsb2F0IHdHID0gYW1wRyAqIHBlYWs7CiAgICBmbG9hdCB3QiA9IGFtcEIgKiBwZWFrOwoKICAgIGZsb2F0IHJjcFdlaWdodFIgPSByY3AoMSArIDQgKiB3Uik7CiAgICBmbG9hdCByY3BXZWlnaHRHID0gcmNwKDEgKyA0ICogd0cpOwogICAgZmxvYXQgcmNwV2VpZ2h0QiA9IHJjcCgxICsgNCAqIHdCKTsKCiAgICByZXR1cm4gZmxvYXQzKAogICAgICAgIHNhdHVyYXRlKChiLnIgKiB3UiArIGQuciAqIHdSICsgZi5yICogd1IgKyBoLnIgKiB3UiArIGUucikgKiByY3BXZWlnaHRSKSwKICAgICAgICBzYXR1cmF0ZSgoYi5nICogd0cgKyBkLmcgKiB3RyArIGYuZyAqIHdHICsgaC5nICogd0cgKyBlLmcpICogcmNwV2VpZ2h0RyksCiAgICAgICAgc2F0dXJhdGUoKGIuYiAqIHdCICsgZC5iICogd0IgKyBmLmIgKiB3QiArIGguYiAqIHdCICsgZS5iKSAqIHJjcFdlaWdodEIpKTsKfQoKCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.50 calc(env(-opera-gx-accent-color-r)/255) calc(env(-opera-gx-accent-color-g)/255) calc(env(-opera-gx-accent-color-b)/255)));
+  }
+</style>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.unimagdalena.edu.co/code/js/main.min.js" async=""></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPLTNHSNPD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GPLTNHSNPD');
+    </script><title>AyRE Estudiantes - Login</title>
+
+<link rel="stylesheet" type="text/css" href="css/keyboard.css">
+
+<script src="js/md5-min.js?306619079" type="text/javascript"></script><script src="js/funciones.js?306619079" type="text/javascript"></script><script src="js/objetoLoginEstudiante.js?306619079" type="text/javascript"></script><script src="js/keyboard.js?306619079" type="text/javascript" charset="ISO-8859-1"></script><script src="js/funcionesGraficos.js?306619079" type="text/javascript"></script>
+<script>
+	function mostrarModal(fondo, msjDiv) {
+		jQuery('#' + fondo).fadeIn();
+		jQuery('#' + msjDiv).fadeIn();
+	}
+	function ocultarModal(fondo, msjDiv) {
+		jQuery('#' + fondo).fadeOut();
+		jQuery('#' + msjDiv).fadeOut();
+	}
+	function down() {
+		var codtt = document.getElementById("codTextLiq").value;
+		var doctt = document.getElementById("docTextLiq").value;
+		var url = "descLiquidacion.jsp?cod=" + codtt + "&doc=" + doctt;
+		window
+				.open(url, 'pdfpp',
+						'width=800,height=600,scrollbars=no,toolbar=no,resizable=yes,top=0,left=0');
+	}
+</script>
+<style type="text/css">
+.tab-content {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	padding: 10px;
+}
+</style>
+<style type="text/css">:root [href^="//mage98rquewz.com/"], :root [href^="//x4pollyxxpush.com/"], :root span[id^="ezoic-pub-ad-placeholder-"], :root ins.adsbygoogle[data-ad-slot], :root ins.adsbygoogle[data-ad-client], :root guj-ad, :root gpt-ad, :root div[id^="zergnet-widget"], :root div[id^="vuukle-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="st"][style^="z-index: 999999999;"], :root div[id^="pa_sticky_ad_box_middle_"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dfp-ad-"], :root div[id^="crt-"][style], :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], :root ps-connatix-module, :root div[id^="ad_position_"], :root div[id^="ad-div-"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-id-advertdfpconf], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-alias="300x250 Ad 2"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-adname], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root atf-ad-slot, :root aside[id^="adrotate_widgets-"], :root ark-top-ad, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root amp-ad, :root div[id^="google_dfp_"], :root ad-slot, :root ad-shield-ads, :root a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://xbet-4.com/"], :root div[id^="ad-position-"], :root a[href^="https://www.toprevenuegate.com/"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://lnkxt.bannerator.com/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://www.financeads.net/tc.php?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://www.dql2clk.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.dating-finder.com/signup/?ai_d="], :root a[href^="https://explore-site.com/"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root a[href^="https://www.adxsrve.com/"], :root [data-template-type="nativead"], :root a[href^="https://www.endorico.com/Smartlink/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://voluum.prom-xcams.com/"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://torguard.net/aff.php"] > img, :root [data-identity="adhesive-ad"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://tatrck.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://t.acam.link/"], :root a[href*="//daichoho.com/"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root div[data-alias="300x250 Ad 1"], :root a[href^="https://syndicate.contentsserved.com/"], :root a[href^="https://svb-analytics.trackerrr.com/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://slkmis.com/"], :root bottomadblock, :root a[href^="https://s.zlinkd.com/"], :root a[href^="https://s.zlink3.com/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://s.optzsrv.com/"], :root a[href^="https://random-affiliate.atimaze.com/"], :root #kt_player > div[style$="display: block;"][style*="inset: 0px;"], :root a[href^="https://quotationfirearmrevision.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://ak.oalsauwy.net/"], :root a[href^="https://softwa.cfd/"], :root a[href^="https://play1ad.shop/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://www.dating-finder.com/?ai_d="], :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root app-ad, :root [href^="https://ap.octopuspop.com/click/"] > img, :root a[href^="https://postback1win.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://pb-front.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://streamate.com/landing/click/"], :root div[class^="Adstyled__AdWrapper-"], :root a[href^="https://startgaming.net/tienda/" i], :root a[href^="https://osfultrbriolenai.info/"], :root a[href^="https://ngineet.cfd/"], :root a[href^="https://upsups.click/"], :root a[href^="https://ndt5.net/"], :root a[href^="http://eighteenderived.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root a[href^="https://m.do.co/c/"] > img, :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href^="https://kiksajex.com/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://snowdayonline.xyz/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://jaxofuna.com/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://hot-growngames.life/"], :root a[href^="https://golinks.work/"], :root a[href^="https://go.xxxvjmp.com/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root .OUTBRAIN[data-widget-id^="FMS_REELD_"], :root [data-role="tile-ads-module"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://go.xlviiirdr.com"], :root a[href^="https://ismlks.com/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root a[href^="https://l.hyenadata.com/"], :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://zirdough.net/"], :root a[href^="https://s.deltraff.com/"], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://lijavaxa.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.dmzjmp.com"], :root div[class^="Display_displayAd"], :root a[href^="https://www.bang.com/?aff="], :root #mgb-container > #mgb, :root a[href^="https://go.admjmp.com"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://clicks.affstrack.com/"] > img, :root a[href^="https://ak.hauchiwu.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://drumskilxoa.click/"], :root a[href^="https://dl-protect.net/"], :root a[href^="https://rixofa.com/"], :root #ads[style^="position: absolute; z-index: 30; width: 100%; height"], :root a[href^="https://disobediencecalculatormaiden.com/"], :root a[href*=".foxqck.com/"], :root a[href^="https://ctosrd.com/"], :root a[href^="https://clixtrac.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://clicks.pipaffiliates.com/"], :root a[href^="https://datewhisper.life/"], :root a[href^="https://get-link.xyz/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root a[href^="https://combodef.com/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root a[href^="https://ctrdwm.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="http://www.iyalc.com/"], :root a[href^="https://claring-loccelkin.com/"], :root a[href^="https://s.ma3ion.com/"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://t.ajrkm1.com/"], :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://black77854.com/"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="http://revolvemockerycopper.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://aweptjmp.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://ausoafab.net/"], :root a[href^="https://activate-game.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root [data-wpas-zoneid], :root a[href^="https://a2.adform.net/"], :root a[href^="https://auesk.cfd/"], :root a[href^="https://ak.psaltauw.net/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://bc.game/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[href^="https://ads.planetwin365affiliate.com/"], :root a[href^="https://ads.leovegas.com/"], :root a[href^="https://a.candyai.love/"], :root a[href^="https://playnano.online/offerwalls/?ref="], :root a[href^="https://a.adtng.com/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root div[id^="rc-widget-"], :root a[href^="http://eslp34af.click/"], :root a[href^="https://turnstileunavailablesite.com/"], :root a[href^="https://chaturbate.com/in/?"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href*="&maxads="], :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://1betandgonow.com/"], :root a[href^="https://eergortu.net/"], :root div[id^="optidigital-adslot"], :root a[href^="https://123-stream.org/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://allhost.shop/aff.php?"], :root [data-dynamic-ads], :root a[href^="http://vnte9urn.click/"], :root a[href^="https://getvideoz.click/"], :root a[href^="http://troopsassistedstupidity.com/"], :root a[href^="http://trk.globwo.online/"], :root a-ad, :root a[href^="https://offhandpump.com/"], :root a[href^="http://stickingrepute.com/"], :root #slashboxes > .deals-rail, :root [data-rc-widget="data-rc-widget"], :root a[href^="http://premonitioninventdisagree.com/"], :root a[href^="http://naggingirresponsible.com/"], :root a[href^="https://in.rabbtrk.com/"], :root a[href^="http://www.h4trck.com/"], :root a[href^="https://81ac.xyz/"], :root a[href^="http://guestblackmail.com/"], :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://sexynearme.com/"], :root a[href^="https://myclick-2.com/"], :root a[href^="http://dragnag.com/"], :root a[href^="http://dragfault.com/"], :root [id^="div-gpt-ad"], :root .ob_container .item-container-obpd, :root div[id^="yandex_ad"], :root a[href^="https://www8.smartadserver.com/"], :root a[href^="https://pb-imc.com/"], :root a[href^="http://deskfrontfreely.com/"], :root [data-advadstrackid], :root a[href^="http://muzzlematrix.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="http://avthelkp.net/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://engine.flixtrial.com/"], :root [data-type="ad-vertical"], :root [data-taboola-options], :root a[href^="http://annulmentequitycereals.com/"], :root a[href^="//startgaming.net/tienda/" i], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://s.cant3am.com/"], :root a[href^="//s.st1net.com/splash.php"], :root a[href^="https://join.virtualtaboo.com/track/"], :root [id^="ad_sky"], :root a[href^="http://coefficienttolerategravel.com/"], :root a[href^="https://a.medfoodsafety.com/"], :root a[href^="//go.eabids.com/"], :root a[href^="//ejitsirdosha.net/"], :root a[href^=" https://www.friendlyduck.com/AF_"], :root a[href*="/jump/next.php?r="], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\], :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://lone-pack.com/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root a[href^="https://t.ajrkm3.com/"], :root [href^="https://aads.com/campaigns/"], :root a[href^="//stighoazon.com/"], :root [href^="https://www.profitablegatecpm.com/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root a[href*=".cfm?domain="][href*="&fp="], :root [data-ad-name], :root a[href^="https://loboclick.com/"], :root a[data-url^="https://vulpix.bet/?ref="], :root a[href^="https://ab.advertiserurl.com/aff/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://go.xlivrdr.com"], :root [onclick^="location.href='https://1337x.vpnonly.site/"], :root [name^="google_ads_iframe"], :root [id^="section-ad-banner"], :root [href^="https://zone.gotrackier.com/"], :root a[href^="http://sarcasmadvisor.com/"], :root [href^="https://www.restoro.com/"], :root [href^="https://www.targetingpartner.com/"], :root .section-subheader > .section-hotel-prices-header, :root [href^="https://www.hostg.xyz/"] > img, :root a[href^="http://adultfriendfinder.com/go/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root [data-ad-width], :root [data-block-type="ad"], :root a[href^="https://baipahanoop.net/"], :root [href^="https://v.investologic.co.uk/"], :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="https://track.aftrk3.com/"], :root [href^="https://join3.bannedsextapes.com"], :root a[href^="https://bodelen.com/"], :root a[href*=".g2afse.com/"], :root div[id^="adngin-"], :root [data-rc-widget], :root span[data-ez-ph-id], :root [href^="https://track.aftrk1.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href^="https://glersakr.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root [id^="ad-wrap-"], :root a[href*="//jjgirls.com/sex/Chaturbate"], :root a[href^="https://a.bestcontentfood.top/"], :root [href^="https://cpa.10kfreesilver.com/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://tracker.loropartners.com/"], :root [href^="https://awbbjmp.com/"], :root a[data-href^="http://ads.trafficjunky.net/"], :root a[href*=".adsrv.eacdn.com/"], :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href^="http://partners.etoro.com/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root [href^="https://ad1.adfarm1.adition.com/"], :root a[href^="https://bngprm.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://go.bushheel.com/"], :root a[href^="https://ctjdwm.com/"], :root a[href^="https://camfapr.com/landing/click/"], :root div[data-ad-wrapper], :root .gnt_em_vp_c[data-g-s="vp_dk"], :root [href="//sexcams.plus/"], :root [href^="http://www.mypillow.com/"] > img, :root #kt_player > a[target="_blank"], :root a[href^="http://bongacams.com/track?"], :root [href^="http://mypillow.com/"] > img, :root [href="https://ourgoldguy.com/contact/"] img, :root #teaser3[style="width: 100%;text-align: center;display: scroll;position:fixed;bottom: 0;margin: 0 auto;z-index: 103;"], :root [href="https://www.masstortfinancing.com/"] > img, :root a[href^="https://go.rmhfrtnd.com/"], :root [href="https://jdrucker.com/gold"] > img, :root a[href^="https://track.1234sd123.com/"], :root zeus-ad, :root [data-testid="prism-ad-wrapper"], :root [href^="https://ad.admitad.com/"], :root [href^="https://mypillow.com/"] > img, :root [data-testid="ad_testID"], :root [href^="https://optimizedelite.com/"] > img, :root [data-name="adaptiveConstructorAd"], :root a[href^="https://go.cmtaffiliates.com/"], :root [data-testid="adBanner-wrapper"], :root [href^="https://mylead.global/stl/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root a[href^="https://go.hpyjmp.com"], :root [href^="https://mystore.com/"] > img, :root citrus-ad-wrapper, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://go.grinsbest.com/"], :root a[href^="https://vo2.qrlsx.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root [href^="https://wct.link/click?"], :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root a[href^="https://witnessjacket.com/"], :root [data-mobile-ad-id], :root a[href^="https://fc.lc/ref/"], :root [data-adshim], :root topadblock, :root a[href^="//s.zlinkd.com/"], :root [class^="amp-ad-"], :root a[href^="http://handgripvegetationhols.com/"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://gamingadlt.com/?offer="], :root [data-desktop-ad-id], :root a[href^="https://www.liquidfire.mobi/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root [id^="ad_slider"], :root [data-adbridg-ad-class], :root #teaser3[style^="width:autopx;"], :root [data-adblockkey], :root [onclick*="content.ad/"], :root [data-ad-manager-id], :root AMP-AD, :root [data-ad-cls], :root [data-revive-zoneid] > iframe, :root [data-ez-name], :root a[href^="https://go.mnaspm.com/"], :root a[href^="https://service.bv-aff-trx.com/"], :root a[href^="https://6-partner.com/"], :root a[href^="https://traffdaq.com/"], :root [href^="https://www.cloudways.com/en/?id"], :root #teaser1[style^="width:autopx;"], :root [class^="div-gpt-ad"], :root a[href^="http://tc.tradetracker.net/"] > img, :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root [data-freestar-ad][id], :root AD-SLOT, :root a[href^="https://www.googleadservices.com/pagead/aclk?"] > img, :root [data-ad-module], :root a[href^="https://losingoldfry.com/"], :root div[id^="div-gpt-"], :root a[href^="https://gml-grp.com/"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root app-advertisement, :root a[href^="https://getmatchedlocally.com/"], :root a[href^="https://clickins.slixa.com/"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="http://li.blogtrottr.com/click?"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root #teaser2[style^="width:autopx;"], :root a[href^="https://t.ajump1.com/"], :root a[href^="https://go.xxxjmp.com"], :root #leader-companion > a[href] { display: none !important; }</style></head>
+<body class="" style="">
+	<!-- Versi&oacute;n 1.6 28/08/2018 Editado por: Jorge Luis Pineda Montagut / CIDS -->
+<div class="loadingContent" aria-hidden="true" style="display: none;">
+	<div class="loader"></div>
+	<span>Cargando. Por favor espere...</span>
+</div>
+<header role="banner">
+    <div class="toolbar">
+        <a id="goto-content" href="#content-main" class="sr-only">Ir al contenido</a>
+        <a href="https://www.facebook.com/UniversidadDelMagdalena/" class="btn btn-xs btn-link" title="Facebook" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="ion-social-facebook"></span><span class="sr-only">Facebook</span></a>
+        <a href="https://twitter.com/unimagdalena" class="btn btn-xs btn-link" title="Twitter" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="ion-social-twitter"></span><span class="sr-only">Twitter</span></a>
+        <a href="https://www.instagram.com/unimagdalena/" class="btn btn-xs btn-link" title="Instagram" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="ion-social-instagram-outline"></span><span class="sr-only">Instagram</span></a>
+        <a href="https://www.youtube.com/user/unimagdalenatv" class="btn btn-xs btn-link" title="Youtube" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="ion-social-youtube"></span><span class="sr-only">Youtube</span></a>
+        <!-- Solo habilitar si el portal es capaz de segmentar o filtar el contenido publicado por estamentos. -->
+        <div class="estamento-lineal visible-md visible-lg">
+            <a href="/modulosAspirantes.jsp" id="enlaceEstamento-5" title="Visualizar información para aspirantes">Aspirantes</a>
+            <a href="/mEstudiantes/indexPrinc.jsp" id="enlaceEstamento-1" title="Módulo estudiantes">Estudiantes</a>
+            <a href="/docentes/indexPrinc.jsp" id="enlaceEstamento-2" title="Visualizar la página web como docente">Docentes</a>
+            <a href="/modEgresado/index.jsp" id="enlaceEstamento-3" title="Visualizar la página web como egresado">Egresados</a>
+            <a href="/ayreAdmin/index.jsp" id="enlaceEstamento-4" title="Visualizar la página web como funcionario">Funcionarios</a>
+        </div>
+        <form action="/" method="get" class="visible-xs visible-sm">
+            <label class="sr-only" for="estamentoUsuario">Seleccionar estamento</label>
+            <select onchange="this.form.submit();" id="estamentoUsuario" name="estamento">
+                <option value="5">Aspirantes</option>
+                <option value="1">Estudiantes</option>
+                <option value="2">Docentes</option>
+                <option value="3">Egresados</option>
+                <option value="4">Funcionarios</option>
+            </select>
+        </form>
+		<div class="btn-group">
+            <button type="button" id="menuOpcionesCiudadano" class="btn btn-xs btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ciudadano <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Transparencia">Transparencia y acceso a la información pública</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://pse.unimagdalena.edu.co/">Pagos en línea</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/PortalNinos">Portal para niños</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/Contacto">Ubicación y medios de contacto</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/PreguntasFrecuentes">Preguntas frecuentes</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="http://cogui.unimagdalena.edu.co/index.php?option=com_samco&amp;view=pqr&amp;Itemid=867" target="_blank" rel="noopener noreferrer">Peticiones, quejas, reclamos y sugerencias</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/ProteccionDatosPersonales">Protección de datos personales</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Content/DocumentosSubItems/subitem-20171129151642_181.pdf">Carta de trato digno al ciudadano</a>
+                </li>
+
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/Glosario">Glosario</a>
+                </li>
+            </ul>
+        </div>    
+        <a href="https://www.unimagdalena.edu.co/Publico/EnlacesAcceso" class="btn btn-xs btn-link">Mapa de sitio</a>
+        <!-- Solo habilitar si el sistema es multi idioma. Reemplazar el action del formulario -->
+        <!-- <form action="/Home/ChangeIdioma" method="get" title="Selecci&oacute;n de idioma">
+
+            <label class="sr-only" for="langPortal">Seleccionar idioma</label>
+			<select id="langPortal" name="idioma" onchange="this.form.submit();">
+				<option selected="selected" value="es">EspaÃ±ol</option>
+				<option value="en">Ingl&eacute;s</option>
+			</select>
+
+        </form> -->
+    	<!-- Solo habilitar si el sistema posee un login o acceso a m&oacute;dulos administrables -->
+        
+        <!-- <a href="/Home/DashBoard" class="btn btn-xs btn-link hidden-xs" title="Ir a mi perfil"><span class="glyphicon glyphicon-cog"></span><span class="sr-only">Ir al perfil</span></a> -->
+    	
+    	<!-- Solo habilitar si el sistema posee acceso a m&oacute;dulos administrables (una vez logueado). Solo mostrar cuando el usuario este logueado. Usar condici&oacute;n de lenguaje servidor -->
+        <!-- <a href="/Account/Login" class="btn btn-xs btn-link hidden-xs" title="Iniciar sesi&oacute;n"><span class="glyphicon glyphicon-user"></span><span class="sr-only">Iniciar sesi&oacute;n</span></a> -->
+        
+    </div>
+    <div class="nav-bar">
+        <div class="brand">
+            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Dependencia/2002">
+                <img src="https://cdn.unimagdalena.edu.co/images/escudo/bg_dark/default.png" alt="Escudo de la Universidad del Magdalena">
+                <h1>Grupo de Admisiones, Registro y Control Académico <span>Unimagdalena</span></h1>
+            </a>
+        </div>
+        <div id="navbar-mobile" class="text-center">
+            <button type="button" class="btn btn-block btn-primary" title="Menu de navegación"><span aria-hidden="true" class="ion-navicon-round"></span><span class="sr-only">Menú de navegación</span></button>
+        </div>
+        <nav role="navigation" id="nav-main">
+            <ul role="menubar">
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Dependencia/2002">Inicio</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="#miUniversidad" aria-haspopup="true" aria-expanded="false">Mi Universidad</a>
+                    <ul role="menu" id="miUniversidad" aria-label="Mi Universidad">
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/Historia">Historia</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/MisionVision">Misión y visión</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/SimbolosInstitucionales">Símbolos institucionales</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/PEI">Proyecto Educativo Institucional</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/EstructuraOrganizacional">Estructura organizacional</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/UnidadesAdministrativas">Unidades administrativas</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Facultades">Facultades</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/DirectorioTelefonico">Directorio telefónico</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/PlanesGobierno">Planes de gobierno</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/PlanesDesarrollo">Planes de desarrollo</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/RendicionCuentas">Rendición de cuentas</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/InformesGestion">Informes de gestión</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Direccion/8">Secretaría general</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a role="menuitem" href="#ofertaAcademica" aria-haspopup="true" aria-expanded="false">Oferta académica</a>
+                    <ul role="menu" id="ofertaAcademica" aria-label="Oferta académica">
+                        <li>
+                            <a role="menuitem" href="#ofertaPregrado" class="menu">Pregrado</a>
+                            <ul role="menu" id="ofertaPregrado" aria-label="Pregrado">
+                                
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Pregrado?nivel=1">Profesional</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Pregrado?nivel=3">Tecnológico</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Pregrado?nivel=6">Técnico profesional</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#ofertaPostgrado" class="menu">Postgrado</a>
+                            <ul role="menu" id="ofertaPostgrado" aria-label="Postgrado">
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Postgrado?nivel=2">Especializaciones</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Postgrado?nivel=4">Maestrías</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/Postgrado?nivel=5">Doctorados</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#ofertaFormacionParaElTrabajo" class="menu">Formación para el trabajo y desarrollo humano</a>
+                            <ul role="menu" id="ofertaFormacionParaElTrabajo" aria-label="Formación para el trabajo y desarrollo humano">
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/FormacionParaElTrabajo?nivel=1004">Técnico laboral</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/OfertaAcademica/FormacionParaElTrabajo?nivel=1005">Técnico laboral por competencias</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#formacionContinua" class="menu">Formación continua</a>
+                            <ul role="menu" id="formacionContinua" aria-label="Formación continua">
+                                <li role="none">
+                                    <a role="menuitem" href="http://estudiosgenerales.unimagdalena.edu.co/home/informacion" target="_blank" rel="noopener noreferrer">Idiomas</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Diplomados/Listado">Diplomados</a>
+                                </li>
+                                <li role="none">
+                                    <a role="menuitem" href="http://estudiosgenerales.unimagdalena.edu.co/home/programanivelatorio" target="_blank" rel="noopener noreferrer">Nivelatorio</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a role="menuitem" href="http://investigacion.unimagdalena.edu.co/" target="_blank" rel="noopener noreferrer">Investigación</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="http://vicextension.unimagdalena.edu.co/" target="_blank" rel="noopener noreferrer">Extensión</a>
+                </li>
+                <li>
+                    <a role="menuitem" href="https://www.unimagdalena.edu.co/Internacionalizacion">Internacionalización</a>
+                    
+                </li>
+                <li>
+                    <a role="menuitem" id="searchFormLink" href="#buscadorGeneral"><span aria-hidden="true" class="glyphicon glyphicon-search" title="Buscador general"></span><span class="sr-only">Buscador general</span></a>
+                    <ul id="buscadorGeneral" class="right">
+                        <li>
+                            <form class="form-inline" name="globalSearchForm" onsubmit="return searchForm(event)">
+                                <label class="sr-only" for="searchMain">Buscador general</label>
+                                <input class="form-control" name="search" id="searchMain" placeholder="Buscar..." maxlength="255" required="">
+                                <button type="submit" class="btn btn-primary" title="Buscar"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
+                            </form>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-4"></div>
+			<div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+				<center>
+					<div class="panel panel-primary" style="margin-top:40px;margin-bottom:10px;">
+						<div class="panel-heading">
+							<h4>LOGIN ESTUDIANTES</h4>
+						</div>
+						<div class="panel-body">
+							<input type="tel" class="form-control" name="user" id="user" placeholder="Código" required="" onfocus="mostrarCertificacion();" style="margin-bottom: 3px;">
+							<input type="password" class="form-control keyboardInput" name="password" id="password" placeholder="Contraseña" required="" onkeypress="tecla = (document.all) ? event.keyCode : event.which; if (tecla==13){consultarDatos()}" vki_attached="true"><img src="imagenes/keyboard.png" alt="Mostrar teclado virtual" class="keyboardInputInitiator" title="Mostrar teclado virtual">
+							<div id="divCargando" style="display: none" class="divCargaLog">
+								<img src="/imagenes/loading2.gif" alt="cargando">
+							</div>
+							<button class="btn btn-lg btn-info btn-block" type="button" id="entrarButton" name="button" onclick="consultarDatos()" style="margin-top: 4px;">Entrar</button>
+						</div>
+					</div>
+					<a href="/filecomp/publicaciones/pdf/Acuerdo_Superior_017_de_2018.pdf" class="btn btn-warning" style="margin-bottom:8px;margin-top:2px;" target="_blank">Política de privacidad de datos personales</a>
+				</center>
+                <script>
+                    function consultarDatos() {
+                        // Obtener valores ingresados
+                        const user = document.getElementById("user").value;
+                        const password = document.getElementById("password").value;
+                
+                        // Mostrar el div de carga mientras valida
+                        const divCargando = document.getElementById("divCargando");
+                        divCargando.style.display = "block";
+                
+                        // Simular una pequeña demora para la validación
+                        setTimeout(() => {
+                            divCargando.style.display = "none"; // Ocultar el div de carga
+                
+                            // Validar credenciales
+                            if (user === "2024220010" && password === "12345password") {
+                                alert("Login exitoso. Bienvenido.");
+                                // Redirigir a otra página
+                                window.location.href = "pagina_principal.html"; 
+                            } else {
+                                alert("Usuario o contraseña incorrectos.");
+                            }
+                        }, 1000);
+                    }
+                
+                    function mostrarCertificacion() {
+                        console.log("Función mostrarCertificacion ejecutada (personalízala según sea necesario).");
+                    }
+                </script>
+			</div>
+			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-4"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 col-lg-2 hidden-xs hidden-sm"></div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+				<ul class="nav nav-tabs responsive" style="margin-top: 20px;">
+					<li>
+						<a data-toggle="tab" href="#sectionA">Ayuda con el ingreso</a>
+					</li>
+					
+					<li>
+						<a data-toggle="tab" href="#sectionB">Trámites y servicios</a>
+					</li>
+					
+					<li>
+						<a data-toggle="tab" href="#sectionC">Normatividad</a>
+					</li>
+					
+					<li>
+						<a data-toggle="tab" href="#sectionE">Encuestas</a>
+					</li>
+					
+					<li class="active">
+						<a data-toggle="tab" href="#sectionD">Política de Gratuidad</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div id="sectionA" class="tab-pane fade">
+						<ul class="list-group" style="margin: 5px;">
+							<li class="list-group-item">
+								<a href="/estudiantes/conCodigo/">Si no recuerdas tu código estudiantil ingresa AQUI</a>
+							</li>
+							<li class="list-group-item">
+								<a href="javascript:jQuery('#divRecordarClave').fadeIn();void(0);">¿Ha olvidado la contraseña?</a>
+								<div id="divRecordarClave" class="alert alert-warning" style="display: none;">
+									<input type="text" class="form-control" name="codText" id="codText" placeholder="Código estudiantil" required="" width="50%"> <input type="text" class="form-control" name="docText" id="docText" placeholder="Número de documento" required=""> <input class="btn btn-warning" type="button" value="Restablecer clave" onclick="maeObj.recordarContrasena2();"> <input class="btn btn-danger" type="button" value="Cerrar" onclick="jQuery('#divRecordarClave').fadeOut();"> <br>
+									Se enviará automaticamente un correo electronico con un
+									enlace para restablecer su contraseña
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="btn btn-lg btn-info btn-block" href="http://campusvirtual.unimagdalena.edu.co/" target="_blank" style="margin-top:4px;">Ingreso al campus virtual de Unimagdalena (Brightspace)</a>
+							</li>
+						</ul>
+						<div class="well" style="margin: 5px;">
+							Consulte el siguiente vídeo para recordar la contraseña del <b>correo institucional</b>:
+							<center>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/lf3DAByPaxU" title="Recordar contraseña" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							</center>
+						</div>
+					</div>
+					<div id="sectionB" class="tab-pane fade">
+						<ul class="list-group" style="margin: 5px;">
+							<!--<li class="list-group-item list-group-item-warning">
+								<a href="saldosPendientes.jsp">Consulta de saldos pendientes 2021I</a>
+							</li>!-->
+							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=26">Cancelación de semestre web </a></li>
+							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=8">Solicitud de reembolso</a></li>
+							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=6">Actualizacion de datos</a></li>
+							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=5">Descuento por hermanos</a></li>
+							<li class="list-group-item"><a href="/servicios/" style="display: block; padding-top: 5px;">Ver todos los trámites y servicios</a></li>
+						</ul>
+					</div>
+					<div id="sectionC" class="tab-pane fade">
+						<ul class="list-group" style="margin: 5px;">
+							<li class="list-group-item"><a href="/filecomp/publicaciones/pdf/REGLAMENTO_ESTUDIANTIL.pdf">Reglamento estudiantil</a></li>
+							<li class="list-group-item"><a href="/estudiantes/PlanesEstudio.jsp?moda=PRE">Planes de estudios Pregrado Presencial</a></li>
+							<li class="list-group-item"><a href="/estudiantes/PlanesEstudio.jsp?moda=POS">Planes de estudios Postgrados</a></li>
+							<li class="list-group-item"><a href="/estudiantes/PlanesEstudio.jsp?moda=DIS">Planes de estudios Distancia</a></li>
+							<li class="list-group-item"><a href="/filecomp/todos/RESUMEN_DESCUENTOS.pdf">Exoneraciones</a></li>
+							<li class="list-group-item"><a href="uploads/Practica_Grado_26-06-2010.pdf" target="_blank">Estudiantes de práctica y grado</a></li>
+						</ul>
+					</div>
+					
+					<div id="sectionE" class="tab-pane fade">
+						<ul class="list-group" style="margin: 5px;">
+							<li class="list-group-item">
+								<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=G85p_cYg7EK1Tm0bOHCsbtWNtPE47DNDhs1i80oafyhURUtYSUI1WkYyWTFLRTMzMk9VMEozVUtZNi4u" target="_blank">
+									Encuesta de satisfacción de los servicios brindados por el grupo AyRE unimagdalena
+								</a>
+							</li>
+							<!--<li class="list-group-item">
+								<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=G85p_cYg7EK1Tm0bOHCsbjTa6pUJUiFHsEAcdO9HuxlUOFdCRzJUV0kwSklJUk4zTUZRSUxQNDdTSS4u" target = "_blank">
+									Encuesta de satisfacción del proceso de certificados emitidos por el grupo <b>AyRE</b>
+								</a>
+
+							</li>-->
+							<li class="list-group-item">
+								<a href="https://forms.office.com/r/GsHwt5rq5a" target="_blank">
+									Ficha técnica para caracterización de estudiantes de la Universidad del Magdalena.
+								</a>
+
+							</li>
+
+							<!--<li class="list-group-item">
+								<a href = "https://forms.office.com/r/zrLkbKv0Pc" target = "_blank">
+									Caracterización de madres y padres Unimagdalena-Centro de Atención Integral a la Infancia
+								</a>
+							</li>	-->
+						</ul>
+					</div>					
+					<div id="sectionD" class="tab-pane fade in active">
+						<ul class="list-group" style="margin: 5px;">
+							<li class="list-group-item"><a href="/filecomp/documentos/DECRETO 2271 DEL 29 DE DICIEMBRE DE 2023.pdf" target="_blank">Decreto No. 2271 de 2023</a></li>
+							<li class="list-group-item"><a href="/filecomp/documentos/Reglamento_Operativo_Politica_Gratuidad_2024.pdf" target="_blank">Reglamento Operativo Política de estado de gratuidad en la matrícula</a></li>
+							<li class="list-group-item"><a href="/filecomp/documentos//reglamento-operativo-equidad.pdf" target="_blank">Reglamento Operativo Programa Generacion E componente Equidad</a></li>
+						</ul>
+					</div>
+					<!--<div id="sectionD" class="tab-pane fade">
+						<ul class="list-group" style='margin: 5px;'>
+							<li class="list-group-item">20 login diarios máximos.</li>
+							<li class="list-group-item">5 cambios de horario al
+								día.</li>
+							<li class="list-group-item">5 cambios durante todo
+								el proceso.</li>
+							<li class="list-group-item">Además durante fechas de ajuste
+								al registro académico podrá realizar 2 cambios más.</li>
+						</ul>
+					</div>!-->
+					
+					
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 hidden-xs hidden-sm"></div>
+		</div>
+	</div>
+
+	<!-- Versi&oacute;n 1.6 25/09/2018 Editado por: Manuel Villalba / AyRE -->
+<footer class="footerUM">
+    <div class="container">
+        <div class="logosGeneral">
+            <img id="selloUnimagdalena" src="https://cdn.unimagdalena.edu.co/images/escudo/bg_dark/default.png" alt="escudo de la Universidad del Magdalena">
+            <img id="yearsUnimagdalena" src="https://cdn.unimagdalena.edu.co/images/years_96.png" alt="escudo de los años que tiene la Universidad del Magdalena">
+            <img id="selloAcreditacion" src="https://cdn.unimagdalena.edu.co/images/acreditacion/default-border.png" alt="Marca de acreditación de alta calidad">
+			<img id="selloColombia" src="https://cdn.unimagdalena.edu.co/images/escudo_colombia.png" alt="Escudo de colombia">
+            <img id="sellosCalidad" class="img-responsive" src="https://cdn.unimagdalena.edu.co/images/calidad/bg-dark/default.png" alt="Sellos de calidad">
+            <script src="https://cdn.unimagdalena.edu.co/code/js/updates.js" defer=""></script>
+        </div>
+    </div>
+    <div class="container">
+        <div id="enlacesInteres">
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-sm-6 footerColum">
+                    <h3 class="tituloColum">Enlaces de interés</h3>
+                    <ul>
+                        <li>
+                            <a href="http://estrategia.gobiernoenlinea.gov.co" target="_blank" rel="noopener noreferrer">Gobierno en línea</a>
+                        </li>
+                        <li>
+                            <a href="http://www.mineducacion.gov.co/1759/w3-channel.html" target="_blank" rel="noopener noreferrer">Ministerio de Educación</a>
+                        </li>
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/Publico/Mecanismos">Mecanismos de control y vigilancia</a>
+                        </li>
+                        <li>
+                            <a href="http://aprende.colombiaaprende.edu.co/estudiantes2016" target="_blank" rel="noopener noreferrer">Colombia Aprende</a>
+                        </li>
+                        <li>
+                            <a href="https://portal.icetex.gov.co/Portal/" target="_blank" rel="noopener noreferrer">Icetex</a>
+                        </li>
+                        <li>
+                            <a href="http://www.colciencias.gov.co" target="_blank" rel="noopener noreferrer">Colciencias</a>
+                        </li>
+                        <li>
+                            <a href="http://www.renata.edu.co/index.php" target="_blank" rel="noopener noreferrer">Renata</a>
+                        </li>
+                        <li>
+                            <a href="http://www.universia.net.co" target="_blank" rel="noopener noreferrer">Universia</a>
+                        </li>
+                        <li>
+                            <a href="https://www.encuestafacil.com/universia/UnivGenerica.aspx" target="_blank" rel="noopener noreferrer">universia.encuestafacil </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-3 col-sm-6 footerColum" style="margin-bottom:21px;">
+                    <h3 class="tituloColum">Atención al ciudadano</h3>
+                    <ul>
+                        <li>
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Transparencia">Transparencia y acceso a la información pública</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="https://pse.unimagdalena.edu.co/">Pagos en línea</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/PortalNinos">Portal para niños</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/Contacto">Ubicación y medios de contacto</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="/FAQ/">Preguntas frecuentes</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="http://cogui.unimagdalena.edu.co/index.php?option=com_samco&amp;view=pqr&amp;Itemid=867" target="_blank" rel="noopener noreferrer">Peticiones, quejas, reclamos y sugerencias</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/ProteccionDatosPersonales">Protección de datos personales</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Content/DocumentosSubItems/subitem-20171129151642_181.pdf">Carta de trato digno al ciudadano</a>
+                        </li>                
+                        <li>
+                            <a role="menuitem" href="https://www.unimagdalena.edu.co/Publico/Glosario">Glosario</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-3 col-sm-6 footerColum">
+                    <h3 class="tituloColum">Información general</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/Content/Public/Docs/reglamento_estudiantil.pdf" target="_blank" rel="noopener noreferrer">Reglamento estudiantil</a>
+                        </li>
+                        <!--<li>
+                            <a href="https://admisiones.unimagdalena.edu.co/filecomp/publicaciones/pdf/Calendario_Academico_2020.pdf" target="_blank" rel="noopener noreferrer">Calendario acad&eacute;mico</a>
+                        </li>
+						!-->
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/Publico/ProteccionDatosPersonales">Protección de datos personales</a>
+                        </li>
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/Publico/InformesGestion">Informes de gestión</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-3 col-sm-6 footerColum">
+                    <h3 class="tituloColum">Servicios</h3>
+                    <ul>
+                        <li>
+                            <a href="http://bienestar.unimagdalena.edu.co" target="_blank" rel="noopener noreferrer">Bienestar universitario</a>
+                        </li>
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Dependencia/9">Recursos educativos</a>
+                        </li>
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Dependencia/6">Biblioteca Germán Bula Meyer</a>
+                        </li>
+                        <li>
+                            <a href="http://consultorio.unimagdalena.edu.co" target="_blank" rel="noopener noreferrer">Consultorio jurídico y centro de conciliación</a>
+                        </li>
+                        <li>
+                            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Dependencia/4">Cartera</a>
+                        </li>
+                        <li>
+                            <a href="https://pse.unimagdalena.edu.co">Pagos en línea</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-bottom">
+        <div class="container text-center">
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h3 class="tituloColum">Información de contacto</h3>
+                    <ul>
+                        <li>Línea Gratuita Nacional: 01 8000 516060. PBX: (57 - 5) 4381000 EXT. 3221, 3139 y 3117</li>
+                        <li><a href="https://goo.gl/maps/tad2rQS5Jqj" target="_blank" rel="noopener noreferrer">Dirección: Calle 29H3 No. 22 - 01 Santa Marta D.T.C.H. - Colombia. Código Postal No. 470004</a></li>
+                        <li><a href="mailto:contacto@unimagdalena.edu.co" target="_blank" rel="noopener noreferrer">Correo electrónico: admisiones@unimagdalena.edu.co</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-xs-12 text-center">
+                    <p class="infoContacto">La Universidad del Magdalena está sujeta a inspección y vigilancia por el Ministerio de Educación Nacional.</p>
+                    <p>Universidad del Magdalena © 2018</p><p>
+                        <a href="#goto-content" id="goto-up" class="sr-only">Regresar al inicio</a>
+                </p></div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script type="text/javascript">	
+	document.addEventListener("DOMContentLoaded", function (event) {		
+		jQuery('.loadingContent').delay(250).fadeOut("fast");
+	});
+	
+</script>
+<script defer="">
+	function searchForm(event) {
+		event.preventDefault(); // disable normal form submit behavior
+		var win = window.open("https://www.google.com.co/search?q=site:http://www.unimagdalena.edu.co+" + document.globalSearchForm.search.value, '_blank');
+		win.focus();
+		
+		return false; // prevent further bubbling of event
+	}
+</script><div id="divCertifico" class="modal fade" role="dialog" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content" style="padding: 10px;">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4 class="modal-title">Tenga cuidado!</h4>
+				</div>
+				Realice sus consultas sólo desde su computador personal, desde su
+				casa u oficina.<br>
+				<br> En algunos sitios públicos delincuentes están instalando
+				programas para obtener sus claves y realizar posteriormente accesos
+				fraudulentos a su cuenta.<br>
+				<br>
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr valign="top">
+						<td align="center" height="70">Certifico estar en un
+							computador seguro. <br>
+						<br>
+							<button class="btn btn-success" type="button" onclick="certifico(1);">CERTIFICO</button>
+							<button class="btn btn-danger" type="button" onclick="certifico(2);">NO CERTIFICO</button>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+	</div>	
+
+	<script type="text/javascript">		
+	
+	maeObj = new ayreMaeAjax();
+	</script>
+
+
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'IFBKGBIIMKCFAJIJINLMACIFNOLCNPLKPIGCIDIMBDMBHLJCIEDOEGMBBBFAPIBIDELGGPKMOBHGOPPMAPEFEHPJLJCNPNHLIFPBJHNOLFKCBDIECLJHBGIDHDPHMBJJ',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,32,(latency>>8));str=f5_cspm.set_byte(str,33,(latency&0xff));str=f5_cspm.set_byte(str,27,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0660748585aaaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script></body></html>
