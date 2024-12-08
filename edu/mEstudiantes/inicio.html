@@ -1,5 +1,5 @@
 <html lang="es"><head><script type="text/javascript">
-	var afterLogin = "/encuestas/encuestaSatisfaccion_min.jsp?898222542=132458392";
+	var afterLogin = "/encuestas/encuestaSatisfaccion_min.jsp?610322524=534872737";
 </script>
 
 
@@ -56,38 +56,90 @@
         gtag('js', new Date());
 
         gtag('config', 'G-GPLTNHSNPD');
-    </script><title>AyRE Estudiantes - Login</title>
+    </script><title>AyRE Estudiantes - Inicio</title>  
 
-<link rel="stylesheet" type="text/css" href="css/keyboard.css">
+<script type="text/javascript" src="js/objetosConfirmarHorario.js?77270294"></script>
 
-<script src="js/md5-min.js?306619079" type="text/javascript"></script><script src="js/funciones.js?306619079" type="text/javascript"></script><script src="js/objetoLoginEstudiante.js?306619079" type="text/javascript"></script><script src="js/keyboard.js?306619079" type="text/javascript" charset="ISO-8859-1"></script><script src="js/funcionesGraficos.js?306619079" type="text/javascript"></script>
-<script>
-	function mostrarModal(fondo, msjDiv) {
-		jQuery('#' + fondo).fadeIn();
-		jQuery('#' + msjDiv).fadeIn();
+<link rel="stylesheet" href="css/boxJQuery.css?365037=77270294">
+<link rel="stylesheet" href="css/jquery.alerts.css?365037=77270294">
+
+
+<script src="js/epsScript.js?365037=77270294" type="text/javascript"></script>
+
+<script type="text/javascript"> 
+	
+	function actualCamppo(id, iddiv, iddivg, iddivcont){
+		var dato = jQuery.trim(jQuery("#"+iddiv).html());
+		
+		if(id == 1){
+			jQuery("#"+iddivcont).html("<table><tr><td><input type='text' size='10' maxlength='10' value='"+dato+"' id='idCel'></td> <td> <img src='img/filesaveas.gif' alt='Guardar Celular' onclick='cambiarDatos(1,\""+iddiv+"\", \"idCel\",\""+iddivg+"\",\""+iddivcont+"\")' /></td></tr></table>");
+		}else if(id == 2){
+			jQuery("#"+iddivcont).html("<table><tr><td><input type='text' size='10' maxlength='10' value='"+dato+"' id='idTel'></td> <td> <img src='img/filesaveas.gif' alt='Guardar Teléfono' onclick='cambiarDatos(2,\""+iddiv+"\", \"idTel\",\""+iddivg+"\",\""+iddivcont+"\")' /></td></tr></table>");
+		}else if(id == 4){
+			jQuery("#"+iddivcont).html("<table><tr><td><input type='text' size='60' maxlength='60' value='"+dato+"' id='idEmp'></td> <td> <img src='img/filesaveas.gif' alt='Guardar Email Personal' onclick='cambiarDatos(4,\""+iddiv+"\", \"idEmp\",\""+iddivg+"\",\""+iddivcont+"\")' /></td></tr></table>");
+		}else {
+			jQuery("#"+iddivcont).html("<table><tr><td><input type='text' size='10' maxlength='10' value='"+dato+"' id='idTel2'> </td> <td><img src='img/filesaveas.gif' alt='Guardar Teléfono 2' onclick='cambiarDatos(3,\""+iddiv+"\", \"idTel2\",\""+iddivg+"\",\""+iddivcont+"\")' /></td></tr></table>");
+		}
+		jQuery("#"+iddivg).hide();
+		jQuery("#"+iddivcont).show();
+	}	
+	
+	function cambiarDatos(id, idDiv, idIn, iddivg, iddivcont){	
+	    var dato = jQuery("#"+idIn).val();
+		if(id==1){
+			if(dato.length != 10){
+				alert("El celular debe tener 10 dígitos");
+				return;
+			}
+		}else if(id==2){
+			if(dato.length < 7 || dato.length > 10){
+				alert("El teléfono  debe tener entre 7 y 10 dígitos");
+				return;
+			}
+		}else if(id==4){
+			if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(dato)){
+			   console.log("ok emp");
+			  } else {
+			   alert("La dirección "+dato+" de email es incorrecta.");
+			   return;
+			  }
+			  if(!confirm("Esta seguro de guardar el correo "+dato+"!")){
+				  return;
+			  }
+				 
+		}
+		var parm = "?rand=77270294&id="+id+"&dato="+dato+"&tipod=C.C.&nd=1082850462"; 
+		var urld = "ajaxPages/cambiarInfo.jsp";
+		
+		jQuery.ajax({
+		   type: "POST",
+		   url: urld,
+		   cache: false,
+		   data: parm,
+		   success: function(html){
+			   
+				jQuery("#"+idDiv).html(dato)
+				jQuery("#"+iddivg).show();
+				jQuery("#"+iddivcont).hide();
+			}
+		});
 	}
-	function ocultarModal(fondo, msjDiv) {
-		jQuery('#' + fondo).fadeOut();
-		jQuery('#' + msjDiv).fadeOut();
-	}
-	function down() {
-		var codtt = document.getElementById("codTextLiq").value;
-		var doctt = document.getElementById("docTextLiq").value;
-		var url = "descLiquidacion.jsp?cod=" + codtt + "&doc=" + doctt;
-		window
-				.open(url, 'pdfpp',
-						'width=800,height=600,scrollbars=no,toolbar=no,resizable=yes,top=0,left=0');
-	}
+
 </script>
-<style type="text/css">
-.tab-content {
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	padding: 10px;
-}
+<style type="text/css">		
+	#marcofoto {
+		height: 180px;
+		width: 136px;
+		overflow: hidden;
+	}
+	#marcofoto img {
+		margin-left: -35%;
+	}
+	.table td, .table th{font-size:14px;}
+	
 </style>
 <style type="text/css">:root [href^="//mage98rquewz.com/"], :root [href^="//x4pollyxxpush.com/"], :root span[id^="ezoic-pub-ad-placeholder-"], :root ins.adsbygoogle[data-ad-slot], :root ins.adsbygoogle[data-ad-client], :root guj-ad, :root gpt-ad, :root div[id^="zergnet-widget"], :root div[id^="vuukle-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="st"][style^="z-index: 999999999;"], :root div[id^="pa_sticky_ad_box_middle_"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dfp-ad-"], :root div[id^="crt-"][style], :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], :root ps-connatix-module, :root div[id^="ad_position_"], :root div[id^="ad-div-"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-id-advertdfpconf], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-alias="300x250 Ad 2"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-adname], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root atf-ad-slot, :root aside[id^="adrotate_widgets-"], :root ark-top-ad, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root amp-ad, :root div[id^="google_dfp_"], :root ad-slot, :root ad-shield-ads, :root a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://xbet-4.com/"], :root div[id^="ad-position-"], :root a[href^="https://www.toprevenuegate.com/"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://lnkxt.bannerator.com/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://www.financeads.net/tc.php?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://www.dql2clk.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.dating-finder.com/signup/?ai_d="], :root a[href^="https://explore-site.com/"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root a[href^="https://www.adxsrve.com/"], :root [data-template-type="nativead"], :root a[href^="https://www.endorico.com/Smartlink/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://voluum.prom-xcams.com/"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://torguard.net/aff.php"] > img, :root [data-identity="adhesive-ad"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://tatrck.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://t.acam.link/"], :root a[href*="//daichoho.com/"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root div[data-alias="300x250 Ad 1"], :root a[href^="https://syndicate.contentsserved.com/"], :root a[href^="https://svb-analytics.trackerrr.com/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://slkmis.com/"], :root bottomadblock, :root a[href^="https://s.zlinkd.com/"], :root a[href^="https://s.zlink3.com/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://s.optzsrv.com/"], :root a[href^="https://random-affiliate.atimaze.com/"], :root #kt_player > div[style$="display: block;"][style*="inset: 0px;"], :root a[href^="https://quotationfirearmrevision.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://ak.oalsauwy.net/"], :root a[href^="https://softwa.cfd/"], :root a[href^="https://play1ad.shop/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://www.dating-finder.com/?ai_d="], :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root app-ad, :root [href^="https://ap.octopuspop.com/click/"] > img, :root a[href^="https://postback1win.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://pb-front.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://streamate.com/landing/click/"], :root div[class^="Adstyled__AdWrapper-"], :root a[href^="https://startgaming.net/tienda/" i], :root a[href^="https://osfultrbriolenai.info/"], :root a[href^="https://ngineet.cfd/"], :root a[href^="https://upsups.click/"], :root a[href^="https://ndt5.net/"], :root a[href^="http://eighteenderived.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root a[href^="https://m.do.co/c/"] > img, :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href^="https://kiksajex.com/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://snowdayonline.xyz/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://jaxofuna.com/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://hot-growngames.life/"], :root a[href^="https://golinks.work/"], :root a[href^="https://go.xxxvjmp.com/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root .OUTBRAIN[data-widget-id^="FMS_REELD_"], :root [data-role="tile-ads-module"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://go.xlviiirdr.com"], :root a[href^="https://ismlks.com/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root a[href^="https://l.hyenadata.com/"], :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://zirdough.net/"], :root a[href^="https://s.deltraff.com/"], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://lijavaxa.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.dmzjmp.com"], :root div[class^="Display_displayAd"], :root a[href^="https://www.bang.com/?aff="], :root #mgb-container > #mgb, :root a[href^="https://go.admjmp.com"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://clicks.affstrack.com/"] > img, :root a[href^="https://ak.hauchiwu.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://drumskilxoa.click/"], :root a[href^="https://dl-protect.net/"], :root a[href^="https://rixofa.com/"], :root #ads[style^="position: absolute; z-index: 30; width: 100%; height"], :root a[href^="https://disobediencecalculatormaiden.com/"], :root a[href*=".foxqck.com/"], :root a[href^="https://ctosrd.com/"], :root a[href^="https://clixtrac.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://clicks.pipaffiliates.com/"], :root a[href^="https://datewhisper.life/"], :root a[href^="https://get-link.xyz/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root a[href^="https://combodef.com/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root a[href^="https://ctrdwm.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="http://www.iyalc.com/"], :root a[href^="https://claring-loccelkin.com/"], :root a[href^="https://s.ma3ion.com/"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://t.ajrkm1.com/"], :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://black77854.com/"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="http://revolvemockerycopper.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://aweptjmp.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://ausoafab.net/"], :root a[href^="https://activate-game.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root [data-wpas-zoneid], :root a[href^="https://a2.adform.net/"], :root a[href^="https://auesk.cfd/"], :root a[href^="https://ak.psaltauw.net/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://bc.game/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[href^="https://ads.planetwin365affiliate.com/"], :root a[href^="https://ads.leovegas.com/"], :root a[href^="https://a.candyai.love/"], :root a[href^="https://playnano.online/offerwalls/?ref="], :root a[href^="https://a.adtng.com/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root div[id^="rc-widget-"], :root a[href^="http://eslp34af.click/"], :root a[href^="https://turnstileunavailablesite.com/"], :root a[href^="https://chaturbate.com/in/?"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href*="&maxads="], :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://1betandgonow.com/"], :root a[href^="https://eergortu.net/"], :root div[id^="optidigital-adslot"], :root a[href^="https://123-stream.org/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://allhost.shop/aff.php?"], :root [data-dynamic-ads], :root a[href^="http://vnte9urn.click/"], :root a[href^="https://getvideoz.click/"], :root a[href^="http://troopsassistedstupidity.com/"], :root a[href^="http://trk.globwo.online/"], :root a-ad, :root a[href^="https://offhandpump.com/"], :root a[href^="http://stickingrepute.com/"], :root #slashboxes > .deals-rail, :root [data-rc-widget="data-rc-widget"], :root a[href^="http://premonitioninventdisagree.com/"], :root a[href^="http://naggingirresponsible.com/"], :root a[href^="https://in.rabbtrk.com/"], :root a[href^="http://www.h4trck.com/"], :root a[href^="https://81ac.xyz/"], :root a[href^="http://guestblackmail.com/"], :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://sexynearme.com/"], :root a[href^="https://myclick-2.com/"], :root a[href^="http://dragnag.com/"], :root a[href^="http://dragfault.com/"], :root [id^="div-gpt-ad"], :root .ob_container .item-container-obpd, :root div[id^="yandex_ad"], :root a[href^="https://www8.smartadserver.com/"], :root a[href^="https://pb-imc.com/"], :root a[href^="http://deskfrontfreely.com/"], :root [data-advadstrackid], :root a[href^="http://muzzlematrix.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="http://avthelkp.net/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://engine.flixtrial.com/"], :root [data-type="ad-vertical"], :root [data-taboola-options], :root a[href^="http://annulmentequitycereals.com/"], :root a[href^="//startgaming.net/tienda/" i], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://s.cant3am.com/"], :root a[href^="//s.st1net.com/splash.php"], :root a[href^="https://join.virtualtaboo.com/track/"], :root [id^="ad_sky"], :root a[href^="http://coefficienttolerategravel.com/"], :root a[href^="https://a.medfoodsafety.com/"], :root a[href^="//go.eabids.com/"], :root a[href^="//ejitsirdosha.net/"], :root a[href^=" https://www.friendlyduck.com/AF_"], :root a[href*="/jump/next.php?r="], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\], :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://lone-pack.com/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root a[href^="https://t.ajrkm3.com/"], :root [href^="https://aads.com/campaigns/"], :root a[href^="//stighoazon.com/"], :root [href^="https://www.profitablegatecpm.com/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root a[href*=".cfm?domain="][href*="&fp="], :root [data-ad-name], :root a[href^="https://loboclick.com/"], :root a[data-url^="https://vulpix.bet/?ref="], :root a[href^="https://ab.advertiserurl.com/aff/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://go.xlivrdr.com"], :root [onclick^="location.href='https://1337x.vpnonly.site/"], :root [name^="google_ads_iframe"], :root [id^="section-ad-banner"], :root [href^="https://zone.gotrackier.com/"], :root a[href^="http://sarcasmadvisor.com/"], :root [href^="https://www.restoro.com/"], :root [href^="https://www.targetingpartner.com/"], :root .section-subheader > .section-hotel-prices-header, :root [href^="https://www.hostg.xyz/"] > img, :root a[href^="http://adultfriendfinder.com/go/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root [data-ad-width], :root [data-block-type="ad"], :root a[href^="https://baipahanoop.net/"], :root [href^="https://v.investologic.co.uk/"], :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="https://track.aftrk3.com/"], :root [href^="https://join3.bannedsextapes.com"], :root a[href^="https://bodelen.com/"], :root a[href*=".g2afse.com/"], :root div[id^="adngin-"], :root [data-rc-widget], :root span[data-ez-ph-id], :root [href^="https://track.aftrk1.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href^="https://glersakr.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root [id^="ad-wrap-"], :root a[href*="//jjgirls.com/sex/Chaturbate"], :root a[href^="https://a.bestcontentfood.top/"], :root [href^="https://cpa.10kfreesilver.com/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://tracker.loropartners.com/"], :root [href^="https://awbbjmp.com/"], :root a[data-href^="http://ads.trafficjunky.net/"], :root a[href*=".adsrv.eacdn.com/"], :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href^="http://partners.etoro.com/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root [href^="https://ad1.adfarm1.adition.com/"], :root a[href^="https://bngprm.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://go.bushheel.com/"], :root a[href^="https://ctjdwm.com/"], :root a[href^="https://camfapr.com/landing/click/"], :root div[data-ad-wrapper], :root .gnt_em_vp_c[data-g-s="vp_dk"], :root [href="//sexcams.plus/"], :root [href^="http://www.mypillow.com/"] > img, :root #kt_player > a[target="_blank"], :root a[href^="http://bongacams.com/track?"], :root [href^="http://mypillow.com/"] > img, :root [href="https://ourgoldguy.com/contact/"] img, :root #teaser3[style="width: 100%;text-align: center;display: scroll;position:fixed;bottom: 0;margin: 0 auto;z-index: 103;"], :root [href="https://www.masstortfinancing.com/"] > img, :root a[href^="https://go.rmhfrtnd.com/"], :root [href="https://jdrucker.com/gold"] > img, :root a[href^="https://track.1234sd123.com/"], :root zeus-ad, :root [data-testid="prism-ad-wrapper"], :root [href^="https://ad.admitad.com/"], :root [href^="https://mypillow.com/"] > img, :root [data-testid="ad_testID"], :root [href^="https://optimizedelite.com/"] > img, :root [data-name="adaptiveConstructorAd"], :root a[href^="https://go.cmtaffiliates.com/"], :root [data-testid="adBanner-wrapper"], :root [href^="https://mylead.global/stl/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root a[href^="https://go.hpyjmp.com"], :root [href^="https://mystore.com/"] > img, :root citrus-ad-wrapper, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://go.grinsbest.com/"], :root a[href^="https://vo2.qrlsx.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root [href^="https://wct.link/click?"], :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root a[href^="https://witnessjacket.com/"], :root [data-mobile-ad-id], :root a[href^="https://fc.lc/ref/"], :root [data-adshim], :root topadblock, :root a[href^="//s.zlinkd.com/"], :root [class^="amp-ad-"], :root a[href^="http://handgripvegetationhols.com/"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://gamingadlt.com/?offer="], :root [data-desktop-ad-id], :root a[href^="https://www.liquidfire.mobi/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root [id^="ad_slider"], :root [data-adbridg-ad-class], :root #teaser3[style^="width:autopx;"], :root [data-adblockkey], :root [onclick*="content.ad/"], :root [data-ad-manager-id], :root AMP-AD, :root [data-ad-cls], :root [data-revive-zoneid] > iframe, :root [data-ez-name], :root a[href^="https://go.mnaspm.com/"], :root a[href^="https://service.bv-aff-trx.com/"], :root a[href^="https://6-partner.com/"], :root a[href^="https://traffdaq.com/"], :root [href^="https://www.cloudways.com/en/?id"], :root #teaser1[style^="width:autopx;"], :root [class^="div-gpt-ad"], :root a[href^="http://tc.tradetracker.net/"] > img, :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root [data-freestar-ad][id], :root AD-SLOT, :root a[href^="https://www.googleadservices.com/pagead/aclk?"] > img, :root [data-ad-module], :root a[href^="https://losingoldfry.com/"], :root div[id^="div-gpt-"], :root a[href^="https://gml-grp.com/"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root app-advertisement, :root a[href^="https://getmatchedlocally.com/"], :root a[href^="https://clickins.slixa.com/"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="http://li.blogtrottr.com/click?"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root #teaser2[style^="width:autopx;"], :root a[href^="https://t.ajump1.com/"], :root a[href^="https://go.xxxjmp.com"], :root #leader-companion > a[href] { display: none !important; }</style></head>
-<body class="" style="">
+<body id="bodyAll">
 	<!-- Versi&oacute;n 1.6 28/08/2018 Editado por: Jorge Luis Pineda Montagut / CIDS -->
 <div class="loadingContent" aria-hidden="true" style="display: none;">
 	<div class="loader"></div>
@@ -318,184 +370,473 @@
         </nav>
     </div>
 </header>
-<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-4"></div>
-			<div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
-				<center>
-					<div class="panel panel-primary" style="margin-top:40px;margin-bottom:10px;">
-						<div class="panel-heading">
-							<h4>LOGIN ESTUDIANTES</h4>
-						</div>
-						<div class="panel-body">
-							<input type="tel" class="form-control" name="user" id="user" placeholder="Código" required="" onfocus="mostrarCertificacion();" style="margin-bottom: 3px;">
-							<input type="password" class="form-control keyboardInput" name="password" id="password" placeholder="Contraseña" required="" onkeypress="tecla = (document.all) ? event.keyCode : event.which; if (tecla==13){consultarDatos()}" vki_attached="true"><img src="imagenes/keyboard.png" alt="Mostrar teclado virtual" class="keyboardInputInitiator" title="Mostrar teclado virtual">
-							<div id="divCargando" style="display: none" class="divCargaLog">
-								<img src="/imagenes/loading2.gif" alt="cargando">
-							</div>
-							<button class="btn btn-lg btn-info btn-block" type="button" id="entrarButton" name="button" onclick="consultarDatos()" style="margin-top: 4px;">Entrar</button>
-						</div>
-					</div>
-					<a href="/filecomp/publicaciones/pdf/Acuerdo_Superior_017_de_2018.pdf" class="btn btn-warning" style="margin-bottom:8px;margin-top:2px;" target="_blank">Política de privacidad de datos personales</a>
-				</center>
-                <script>
-                    function consultarDatos() {
-                        // Obtener valores ingresados
-                        const user = document.getElementById("user").value;
-                        const password = document.getElementById("password").value;
-                
-                        // Mostrar el div de carga mientras valida
-                        const divCargando = document.getElementById("divCargando");
-                        divCargando.style.display = "block";
-                
-                        // Simular una pequeña demora para la validación
-                        setTimeout(() => {
-                            divCargando.style.display = "none"; // Ocultar el div de carga
-                
-                            // Validar credenciales
-                            if (user === "2024220010" && password === "12345password") {
-                                alert("Login exitoso. Bienvenido.");
-                                // Redirigir a otra página
-                                window.location.href = "inicio.html"; 
-                            } else {
-                                alert("Usuario o contraseña incorrectos.");
-                            }
-                        }, 1000);
-                    }
-                
-                    function mostrarCertificacion() {
-                        console.log("Función mostrarCertificacion ejecutada (personalízala según sea necesario).");
-                    }
-                </script>
-			</div>
-			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-4"></div>
-		</div>
+<c:set var="titlePage" value="DATOS PERSONALES" scope="request">
 
+	<script type="text/javascript">
+	var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toUpperCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
+
+/** NORMAL words**/
+var value = 'test';
+const today = new Date();
+const yyyy = today.getFullYear();
+let mm = today.getMonth() + 1; // Months start at 0!
+let dd = today.getDate();
+
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+
+const fecHoyJS = dd + '/' + mm + '/' + yyyy;
+
+//console.log(2024220010);
+//console.log(fecHoyJS);
+var value2 = 2024220010+'*'+fecHoyJS+'*recEducReservas@ayre*_2014-';
+//console.log(value2);
+var result = MD5(value2);
+//console.log(result);
+var urlSiare = 'http://siare.unimagdalena.edu.co/SILAB/Estudiante/Reservas.aspx?cod=2024220010&tok='+result;	    
+//console.log(urlSiare);
+
+</script>
+<style>
+.dropdown-menu>li>form>a {
+	color: #333333;
+	display: block;
+	font-weight: 400;
+	line-height: 1.42857;
+	padding: 3px 20px;
+	white-space: nowrap;
+	text-decoration: none;
+}
+</style>
+<nav class="navbar navbar-default">
+	<div class="container-fluid" id="divMaeMenu">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Módulo estudiantil</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="inicio.jsp?929.6480608511961=0.8640348036735217">Inicio</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Académico<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li>
+						<a onclick="alert('Lo sentimos, usted no puede acceder en este instante, consulte el horario establecido para registro acad\u00E9mico');" href="javascript:{}">Registro Académico</a> 
+							</li>
+						<li><a href="miHorario.jsp?929.6480608511961=0.8640348036735217">Horario</a></li>						
+						<li><a href="miNotas.jsp?929.6480608511961=0.8640348036735217">Notas</a></li>						
+						<li><a href="miHoja.jsp?929.6480608511961=0.8640348036735217">Hoja de vida</a></li>
+						<li><a href="miSabana.jsp?929.6480608511961=0.8640348036735217">Sábana de calificaciones</a></li>
+						<li><a href="miMateriasPendientes.jsp?929.6480608511961=0.8640348036735217">Materias pendientes</a></li>
+						<li><a href="miPlanDeEstudio.jsp?929.6480608511961=0.8640348036735217">Plan de estudio</a></li>
+						<li><a href="miPrepractica_.jsp?929.6480608511961=0.8640348036735217">Pre-Prácticas</a></li>
+						<li><a href="miInscricionGrados.jsp?929.6480608511961=0.8640348036735217">Grados</a></li>
+						<li><a href="saberPro.jsp?929.6480608511961=0.8640348036735217">Saber PRO</a></li>
+						</ul>
+				</li> 
+
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Financiero <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="matriculaFinanciera_VistaPrevia.jsp?rnd929.6480608511961=0.8640348036735217">Consultar valores de liquidación</a></li>
+							<li><a href="peticionAjuste.jsp?rndls=929.6480608511961=0.8640348036735217">Solicitar revisión de liquidación</a></li>
+						<li><a href="miLiquidacionPRE.jsp?929.6480608511961" id="linkliq">Descargar liquidación</a></li>						
+							<li><a href="solicitudReembolsoConvenios.jsp?rndls=929.6480608511961=0.8640348036735217">Solicitar reembolso Convenios Municipios y/o Alcaldias</a></li>	
+						<!--<li><a href="solicitudReembolso.jsp?929.6480608511961=0.8640348036735217">Solicitud de reembolso - FONGES</a></li>
+						-->
+						<li><a href="solicitudReembolsoGratuidad.jsp?rndls=929.6480608511961=0.8640348036735217">Solicitar reembolso Política de Gratuidad</a></li>	
+					</ul>
+				</li>
+
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Servicios <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					
+					<li><a href="#" disabled="">Evaluación docente</a></li>
+					<!--<li><a href="miCancelacion.jsp?929.6480608511961">Cancelar Semestre</a></li>!-->
+					<li><a href="miCancelacionAsignatura.jsp?929.6480608511961">Cancelar asignatura - AcSup 012</a></li>
+					<li><a href="miCancelacion.jsp?929.6480608511961">Cancelar semestre</a></li>
+						<li><a href="miRetiroVoluntario.jsp?929.6480608511961">Retiro Voluntario</a></li>
+						
+					<li><a href="miInscripcion.jsp?929.6480608511961=0.8640348036735217">Modalidades de inscripción</a></li>
+						<li><a href="solCertElectoral.jsp?929.6480608511961=0.8640348036735217">Certificado electoral</a></li>
+						<li><a href="miDescuentoCreditos.jsp?929.6480608511961=0.8640348036735217">Descuento créditos</a></li>
+					<li><a href="solActualizarDatos.jsp?929.6480608511961=0.8640348036735217">Actualizar documento de identidad</a></li>
+						<li><a href="miCertificadosOnLine.jsp?929.6480608511961=0.8640348036735217">Solicitudes de certificados</a></li>
+						<!--<li><a href="miCertSegVida.jsp?929.6480608511961=0.8640348036735217">Certificado seguro estudiantil</a></li>!-->
+					<!--<li><a href="miCertAyudantia.jsp?929.6480608511961=0.8640348036735217">Certificado de ayudantias</a></li>	-->				
+						<li><a href="certificadoSALUD.jsp?929.6480608511961=0.8640348036735217">Certificado afiliación a EPS</a></li>					
+						<li><a href="solicitudEntregaCarne.jsp?929.6480608511961=0.8640348036735217">Solicitud de devolución de carné</a></li>
+					</ul>
+				</li>
+
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi cuenta <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="miHistory.jsp?929.6480608511961=0.8640348036735217">AyRE-History</a></li> 
+
+					<li><a href="misHermanos.jsp?929.6480608511961=0.8640348036735217">Mis hermanos</a></li>
+						<li><a href="misParientes.jsp?929.6480608511961=0.8640348036735217">Mis familiares</a></li>
+					<li><a href="cambiarPass.jsp?929.6480608511961=0.8640348036735217">Cambiar contraseña</a></li>
+					</ul>
+				</li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"> 2024220010 - EDWIN JOSE  GARCIA MANOTAS </a> </li>
+				<li><a href="indexPrinc.jsp?logOut=1">Cerrar sesión</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="msjGeneric" class="tooltip" style="display: none; left: 50%; margin-left: -100px; top: 200px; position: absolute;"></div>
+<script src="js/objetosPaginaVisitada.js?929.6480608511961" type="text/javascript"></script>
+<script type="text/javascript">
+	pvOBJ = new pageVisit();
+	document.getElementById("siareLab").href=urlSiare; 
+	setTimeout("pvOBJ.insertarPaginaVisitada();", 1000);	
+</script><!--	
+		<script type="text/javascript">
+				window.location.href = "/mEstudiantes/solActualizarDatos.jsp?36503777270294";
+		</script>
+		-->
+		<div class="container-fluid">
+		<div class="page-header" style="margin:-8px 0px 14px 0px;padding:0px 0px 10px 0px;">
+			<h4 style="color:#336699;margin:0px 0px 0px 20px;">DATOS PERSONALES</h4>
+		</div>
+		
 		<div class="row">
 			<div class="col-md-2 col-lg-2 hidden-xs hidden-sm"></div>
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-				<ul class="nav nav-tabs responsive" style="margin-top: 20px;">
-					<li>
-						<a data-toggle="tab" href="#sectionA">Ayuda con el ingreso</a>
-					</li>
-					
-					<li>
-						<a data-toggle="tab" href="#sectionB">Trámites y servicios</a>
-					</li>
-					
-					<li>
-						<a data-toggle="tab" href="#sectionC">Normatividad</a>
-					</li>
-					
-					<li>
-						<a data-toggle="tab" href="#sectionE">Encuestas</a>
-					</li>
-					
-					<li class="active">
-						<a data-toggle="tab" href="#sectionD">Política de Gratuidad</a>
-					</li>
-				</ul>
-				<div class="tab-content">
-					<div id="sectionA" class="tab-pane fade">
-						<ul class="list-group" style="margin: 5px;">
-							<li class="list-group-item">
-								<a href="/estudiantes/conCodigo/">Si no recuerdas tu código estudiantil ingresa AQUI</a>
-							</li>
-							<li class="list-group-item">
-								<a href="javascript:jQuery('#divRecordarClave').fadeIn();void(0);">¿Ha olvidado la contraseña?</a>
-								<div id="divRecordarClave" class="alert alert-warning" style="display: none;">
-									<input type="text" class="form-control" name="codText" id="codText" placeholder="Código estudiantil" required="" width="50%"> <input type="text" class="form-control" name="docText" id="docText" placeholder="Número de documento" required=""> <input class="btn btn-warning" type="button" value="Restablecer clave" onclick="maeObj.recordarContrasena2();"> <input class="btn btn-danger" type="button" value="Cerrar" onclick="jQuery('#divRecordarClave').fadeOut();"> <br>
-									Se enviará automaticamente un correo electronico con un
-									enlace para restablecer su contraseña
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 table-responsive" style="min-height:35%">				
+					<h6 style="margin-top:0px; color:#336699;"><b><i>Toda la información mostrada en esta página esta sujeta a revisión, verificación y corrección.</i></b></h6>
+					<table class="table table-bordered">
+						<tbody><tr>							
+							<td colspan="3">
+								<h5 class="etiqueta">Nombre: </h5>
+								EDWIN JOSE &nbsp;GARCIA MANOTAS</td>
+							<td colspan="2">
+								<h5 class="etiqueta">Documento: </h5>
+								C.C.1082850462<span style="color:#AAAAAA;font-size:12px;">(No reporta lugar de expedición)</span>
+								</td>
+							<td width="136" rowspan="12" align="center" valign="top" style="padding: 0px;">
+								<div style="width: 136px; text-align: left;">
+									<img alt="Hi!" id="fload" width="40" height="40" src="/imagenes/loading2.gif" style="display: none;">
+									<div id="marcofoto">
+										<img src="/edu/mEstudiantes/imagenes/2024220010.jpg" height="180" onload="setTimeout(function () {imagenCargada(document.getElementById('no_foto'))},500);" border="0" alt="El estudiante no tienen foto" id="no_foto" name="no_foto" onerror="this.src='/mEstudiantes/imagenes/nofoto.jpg';" style="display: block;">
+									</div>
+									<img id="imgFrechazada" src="imagenes/frechazada.gif" width="136" height="180" border="" style="position: absolute; margin-top: -180px; z-index: 0; display: none;">
 								</div>
-							</li>
-							<li class="list-group-item">
-								<a class="btn btn-lg btn-info btn-block" href="http://campusvirtual.unimagdalena.edu.co/" target="_blank" style="margin-top:4px;">Ingreso al campus virtual de Unimagdalena (Brightspace)</a>
-							</li>
-						</ul>
-						<div class="well" style="margin: 5px;">
-							Consulte el siguiente vídeo para recordar la contraseña del <b>correo institucional</b>:
-							<center>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/lf3DAByPaxU" title="Recordar contraseña" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-							</center>
+							</td>													
+						</tr>
+						<tr>							
+							<td>
+								<h5 class="etiqueta">Celular: </h5>
+								<div id="dvCelG">
+								<table><tbody><tr><td>
+								<div id="dvCel">3217158980</div></td> <td> <img src="imagenes/editar.gif" alt="Editar Celular" onclick="actualCamppo(1,'dvCel','dvCelG','dvCelCont')"> 
+								</td></tr></tbody></table>
+								</div>
+								<div style="display:none;" id="dvCelCont"></div>
+							</td>							
+							<td>
+								<h5 class="etiqueta">Teléfono: </h5>
+								<div id="dvTelG">
+									<table>
+										<tbody><tr><td>
+										<div id="dvTel">
+										4211916
+</div>
+										</td> 
+										<td>
+										<img src="imagenes/editar.gif" alt="Editar Teléfono 1" onclick="actualCamppo(2,'dvTel','dvTelG','dvTelCont')">
+										</td></tr>
+									</tbody></table>
+								</div>
+								<div style="display:none;" id="dvTelCont"></div>
+							</td>
+							<td>
+								<h5 class="etiqueta">Sexo: </h5>
+								Masculino
+</td>
+							<td><h5 class="etiqueta">Fecha de nacimiento: </h5>07/12/2004</td>
+							<td><h5 class="etiqueta">Edad: </h5>20 años</td>
+						</tr>						
+						<tr>							
+							<td colspan="3">
+								<h5 class="etiqueta">Email institucional: </h5>
+								ejgarciam@unimagdalena.edu.co<div style="margin-top:8px"><a href="http://reset.unimagdalena.edu.co/" target="_blank">Restablecer Clave email</a></div>
+							</td>
+							<td colspan="2">
+								<h5 class="etiqueta">Email Personal: </h5>
+								<div id="dvEmpG">
+								<table>
+									<tbody><tr>
+										<td>
+											<div id="dvEmp">edwin.garcia.manotas.0712@gmail.com</div></td> <td> <img src="imagenes/editar.gif" alt="Editar Email Personal" onclick="actualCamppo(4,'dvEmp','dvEmpG','dvEmpCont')"> 
+										</td>
+									</tr>
+								</tbody></table>
+								</div>
+								<div style="display:none;" id="dvEmpCont"></div>
+								<img style="margin:7px;cursor:pointer" src="/edu/mEstudiantes/imagenes/infoBlue.png" border="0" width="20" height="20" onclick="jQuery('#mensajeCorreo').toggle('fast')">
+								
+								<div style="font-size:12px; margin:7px;display:none" id="mensajeCorreo"> 
+									<strong>NOTA:</strong> El uso del email personal solo es para restablecer la clave del correo institucional,
+									la información enviada y los servicios que requieran validación se realizarán solo a través del correo institucional.
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td colspan="2"><h5 class="etiqueta">Ciudad de origen: </h5>SANTA MARTA</td>												
+							<td colspan="2"><h5 class="etiqueta">Ciudad de residencia: </h5>SANTA MARTA</td>
+							<td colspan="1"><h5 class="etiqueta">Estrato: </h5>2</td>
+						</tr>
+						<tr>
+							<td colspan="5"><h5 class="etiqueta">Dirección: </h5>BARRIO  BARRIO LIBANO 2000, MANZANA 13 CASA 8</td>
+						</tr>
+						<tr>
+							<td colspan="3"><h5 class="etiqueta">Colegio: </h5>LICEO VERSALLES</td>							
+							<td colspan="1"><h5 class="etiqueta">Año grado 10°: </h5>2021</td>																									
+							<td colspan="1"><h5 class="etiqueta">Año grado 11°: </h5>2022</td>
+						</tr>						
+						<tr>
+							<td colspan="7" align="left" valign="top">
+								<table>
+								<tbody><tr>
+									<td valign="top">
+										<input class="btn btn-primary" value="Consultar datos académicos" id="vrEstAct" name="vrEstAct" type="button">
+										<div id="loadDA" style="margin: 0 auto;"></div>
+									</td>
+									<td valign="top">
+										<input class="btn btn-warning" value="Consultar anomalías" id="vrAnoml" name="vrAnoml" type="button" style="margin-left: 20px;">
+										<div id="loadCA" style="margin: 0 auto;"></div>
+									</td>
+								</tr>
+								</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+					
+					<div id="tblInfoAnomalia" style="display: none;" class="alert alert-warning">
+						<h5><b>ANOMALÍAS</b></h5>
+						<input type="hidden" id="varAnom" value="ok">
+						<table>
+							<tbody><tr>
+								<td id="contentAnomalias">El estudiante tiene (1) situaciones academicas pendientes o sin definir.<br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </td>
+							</tr>
+						</tbody></table>
+					</div> 
+		
+					<div id="tblInfoEstado" style="" class="alert alert-info table-responsive">
+						<h5><b>DATOS ACADÉMICOS</b></h5>
+						<input type="hidden" id="varAcad" value="ok">
+						<table>
+							<tbody><tr>
+								<td id="contentDatAcademico"><div class="panel panel-primary">																		
+	<div class="panel-heading">Datos del Programa</div>
+	<div class="panel-body">
+		<table class="table">	
+			<tbody><tr>
+				<th>Programa:</th>
+				<td colspan="3">20D - ECONOMÍA</td>
+			</tr>
+			<tr>
+				<th>Facultad:</th>
+				<td colspan="3">FACULTAD DE CIENCIAS EMPRESARIALES Y ECONOMICAS</td>				
+			</tr>
+			<tr>				
+				<th>Plan de estudio:</th>
+				<td>4</td> 
+				<th>Centro Tutorial:</th>
+				<td>
+				<img src="imagenes/NoAplica.gif" align="absmiddle" width="13" height="13" title="No tiene"> </td>
+			</tr>
+			<tr>
+				<th>Estado:</th>
+				<td>NUEVO</td>
+				<th>Situación Académica:</th>
+				<td>SIN DEFINIR</td>
+			</tr>
+			<tr>
+				<th>Prom. Acumulado:</th>
+				<td>0</td>
+				<th>Acuerdo Liquidación:<br><i>(Preg. Presencial)</i></th>
+				<td>Acuerdo Sup. 028 de 2017</td>
+			</tr>
+			<tr>
+				<th>Cód. SNIES:</th>
+				<td>882</td>
+				<th>No. Readmisiones:</th>
+				<td>
+					0</td>
+			</tr>
+			</tbody></table>
+	</div>
+</div>
+<div class="panel panel-primary">																		
+	<div class="panel-heading">Estado Académico</div>
+	<div class="panel-body">
+		<table class="table">			
+			<tbody><tr>
+				<td><b>Asig. pendientes:</b> 44</td>
+				<td><b>Cred. pendientes:</b> 135</td>
+				<td><b>Asig. registrados:</b> 0</td>
+				<td><b>Cred. registrados:</b> 0</td>
+			</tr>
+		</tbody></table>
+		<table class="table">
+			<tbody><tr>
+				<th colspan="2" width="20%">&nbsp;</th>
+				<th width="10%" align="center">NOR</th>
+				<th width="10%" align="center">HOM</th>
+				<th width="10%" align="center">VAC</th>
+				<th width="10%" align="center">VAL</th>
+				<th width="10%" align="center">REC</th>
+				<th width="10%" align="center">CDI</th>
+				<th width="10%" align="center">PERD</th>
+				<th width="10%" align="center">APRO</th>
+			</tr>
+			<tr>
+				<th colspan="2" width="20%">Materias</th>
+				<td width="10%" align="center">7</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">4</td>
+				<td width="10%" align="center">3</td>
+			</tr>
+			<tr>
+				<th colspan="2" width="20%">Créditos</th>
+				<td width="10%" align="center">18</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">0</td>
+				<td width="10%" align="center">11</td>
+				<td width="10%" align="center">7</td>
+			</tr>
+		</tbody></table>
+	</div>
+</div>
+<div class="panel panel-primary">																		
+	<div class="panel-heading">Aprobación de requisitos generales del plan de estudios</div>
+	<div class="panel-body">
+		<table class="table">
+			<tbody><tr>
+				<td>Suf. en Inglés: 		
+						<img src="img/ok.png" align="absmiddle" width="13" height="13"> <br><span style="font-size: 10px; font-style: italic;">(Obligatorio 2003I en adelante)</span>
+				</td>
+				<td>Pre-prácticas:
+					 <img src="img/ok.png" align="absmiddle" width="13" height="13"> </td>
+				<td>Req. Grado:
+					 <img src="img/ok.png" align="absmiddle" width="13" height="13"> </td>
+			</tr>
+			<tr>
+				<td colspan="3"><strong>REQUISITOS ADICIONALES</strong></td>
+			</tr>
+			<tr>
+				<td>Componente Prop.:
+					 <img src="imagenes/NoAplica.gif" align="absmiddle" width="13" height="13"> <br><span style="font-size: 10px; font-style: italic;">(Opcional Prg Hotelería)</span>
+				</td>
+				<td>Optativas:
+					 <img src="img/ok.png" align="absmiddle" width="13" height="13"> <br><span style="font-size: 10px; font-style: italic;">(Oblig. nuevos planes est.)</span>
+				</td>
+				<td>Proyecto Acad.:
+					 <img src="imagenes/NoAplica.gif" align="absmiddle" width="13" height="13"> <br><span style="font-size: 10px; font-style: italic;">(Opcional nuevos planes est.)</span>
+				</td>
+			</tr>
+			<tr>
+				<td>Monog/Judic.:
+					 <img src="imagenes/NoAplica.gif" align="absmiddle" width="13" height="13"> <br><span style="font-size: 10px; font-style: italic;">(Obligatorio Prg. Derecho)</span> 
+				</td>
+				<td colspan="2">
+					
+						&nbsp;
+					</td>
+				
+			</tr>
+		</tbody></table>
+	</div>
+</div>			
+<!--<div class="panel panel-primary">																		
+	<div class="panel-heading">Deudas pendientes</div>
+	<div class="panel-body">
+		<table class='table'>
+			<tr>
+				<td>Admisiones: 
+					</td>
+				<td>Biblioteca: 
+					</td>
+				<td>Cartera: 
+					</td>
+				<td>Clínica: 
+					</td>
+				<td>Laboratorios: 
+					</td>
+			</tr>
+		</table>
+	</div>
+</div>!-->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </td>
+							</tr>
+						</tbody></table>
+					</div>
+					
+					<div id="divPazSalvo" class="divPazSalvo" style="display: none"></div>
+					<div id="divConsultarAlertas" class="divEstFoto" style="display: none;">
+						<img src="imagenes/alert.gif" border="0" align="absmiddle">  
+						<span style="font-size: 20px; margin-left: 10px;">Alerta informativa!!</span><br> <br>
+						<div id="divContentAlertas"></div>
+						<table id="tableContentAlertas" width="100%" border="0" cellpadding="0" cellspacing="0" style="display: block;">
+							<tbody><tr>
+								<td align="right"><a href="javascript:" onclick="mostrarDiv(&quot;divConsultarAlertas&quot;,2);">Cerrar</a></td>
+							</tr>
+						</tbody></table>
+					</div>
+					
+					<div id="dv_banner" class="modal fade" role="dialog">
+					  <div class="modal-dialog">		
+						<div class="modal-content" style="padding:10px;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">×</button>
+							</div>
+						    Por instrucciones de la Vicerrectoría Académica, se requiere identificar en la población de futuros egresados a los estudiantes (presencial e IDEA) que a la fecha están pendientes por realizar algún procedimiento en la plataforma de egresados en referencia a su proceso de grado(diligenciamiento de la encuesta de grado, subir el pago de derecho de grado o su asistencia a la prueba saber pro)<br><br> 
+Los enlaces del sondeo para <b>estudiantes de grado</b>:<br><br> 
+Presencial:
+<a taget="_blank" href="http://apreciacionpresencialactividadespresaberpro.questionpro.com">http://apreciacionpresencialactividadespresaberpro.questionpro.com</a><br><br> 
+Distancia:
+<a taget="_blank" href="http://apreciacionesideaactividadespreparatoriasaberprounimagdalena.questionpro.com">http://apreciacionesideaactividadespreparatoriasaberprounimagdalena.questionpro.com</a><br><br>
 						</div>
-					</div>
-					<div id="sectionB" class="tab-pane fade">
-						<ul class="list-group" style="margin: 5px;">
-							<!--<li class="list-group-item list-group-item-warning">
-								<a href="saldosPendientes.jsp">Consulta de saldos pendientes 2021I</a>
-							</li>!-->
-							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=26">Cancelación de semestre web </a></li>
-							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=8">Solicitud de reembolso</a></li>
-							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=6">Actualizacion de datos</a></li>
-							<li class="list-group-item"><a href="/servicios/?cat=1&amp;ids=5">Descuento por hermanos</a></li>
-							<li class="list-group-item"><a href="/servicios/" style="display: block; padding-top: 5px;">Ver todos los trámites y servicios</a></li>
-						</ul>
-					</div>
-					<div id="sectionC" class="tab-pane fade">
-						<ul class="list-group" style="margin: 5px;">
-							<li class="list-group-item"><a href="/filecomp/publicaciones/pdf/REGLAMENTO_ESTUDIANTIL.pdf">Reglamento estudiantil</a></li>
-							<li class="list-group-item"><a href="/estudiantes/PlanesEstudio.jsp?moda=PRE">Planes de estudios Pregrado Presencial</a></li>
-							<li class="list-group-item"><a href="/estudiantes/PlanesEstudio.jsp?moda=POS">Planes de estudios Postgrados</a></li>
-							<li class="list-group-item"><a href="/estudiantes/PlanesEstudio.jsp?moda=DIS">Planes de estudios Distancia</a></li>
-							<li class="list-group-item"><a href="/filecomp/todos/RESUMEN_DESCUENTOS.pdf">Exoneraciones</a></li>
-							<li class="list-group-item"><a href="uploads/Practica_Grado_26-06-2010.pdf" target="_blank">Estudiantes de práctica y grado</a></li>
-						</ul>
-					</div>
+					  </div>
+					</div>	
 					
-					<div id="sectionE" class="tab-pane fade">
-						<ul class="list-group" style="margin: 5px;">
-							<li class="list-group-item">
-								<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=G85p_cYg7EK1Tm0bOHCsbtWNtPE47DNDhs1i80oafyhURUtYSUI1WkYyWTFLRTMzMk9VMEozVUtZNi4u" target="_blank">
-									Encuesta de satisfacción de los servicios brindados por el grupo AyRE unimagdalena
-								</a>
-							</li>
-							<!--<li class="list-group-item">
-								<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=G85p_cYg7EK1Tm0bOHCsbjTa6pUJUiFHsEAcdO9HuxlUOFdCRzJUV0kwSklJUk4zTUZRSUxQNDdTSS4u" target = "_blank">
-									Encuesta de satisfacción del proceso de certificados emitidos por el grupo <b>AyRE</b>
-								</a>
+					<div id="dv_evaldoc" class="modal fade" role="dialog">
+					  <div class="modal-dialog">		
+						<div class="modal-content" style="padding:10px; text-align: center;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">×</button>
+								<h3 class="modal-title">Apreciado estudiante</h3>
+							</div>
+						    <br>
+							Ya se encuentra activa la <strong>Evaluación Docente</strong> correspondiente<br>al periodo académico 2021-I.<br><br> 
+							Lo invitamos a ingresar al siguiente enlace para realizar la evaluación:<br>
+						
+							<a taget="_blank" href="http://evaluaciondocente.unimagdalena.edu.co/">evaluaciondocente.unimagdalena.edu.co/</a><br><br> 
 
-							</li>-->
-							<li class="list-group-item">
-								<a href="https://forms.office.com/r/GsHwt5rq5a" target="_blank">
-									Ficha técnica para caracterización de estudiantes de la Universidad del Magdalena.
-								</a>
-
-							</li>
-
-							<!--<li class="list-group-item">
-								<a href = "https://forms.office.com/r/zrLkbKv0Pc" target = "_blank">
-									Caracterización de madres y padres Unimagdalena-Centro de Atención Integral a la Infancia
-								</a>
-							</li>	-->
-						</ul>
-					</div>					
-					<div id="sectionD" class="tab-pane fade in active">
-						<ul class="list-group" style="margin: 5px;">
-							<li class="list-group-item"><a href="/filecomp/documentos/DECRETO 2271 DEL 29 DE DICIEMBRE DE 2023.pdf" target="_blank">Decreto No. 2271 de 2023</a></li>
-							<li class="list-group-item"><a href="/filecomp/documentos/Reglamento_Operativo_Politica_Gratuidad_2024.pdf" target="_blank">Reglamento Operativo Política de estado de gratuidad en la matrícula</a></li>
-							<li class="list-group-item"><a href="/filecomp/documentos//reglamento-operativo-equidad.pdf" target="_blank">Reglamento Operativo Programa Generacion E componente Equidad</a></li>
-						</ul>
+						</div>
+					  </div>
 					</div>
-					<!--<div id="sectionD" class="tab-pane fade">
-						<ul class="list-group" style='margin: 5px;'>
-							<li class="list-group-item">20 login diarios máximos.</li>
-							<li class="list-group-item">5 cambios de horario al
-								día.</li>
-							<li class="list-group-item">5 cambios durante todo
-								el proceso.</li>
-							<li class="list-group-item">Además durante fechas de ajuste
-								al registro académico podrá realizar 2 cambios más.</li>
-						</ul>
-					</div>!-->
-					
-					
-				</div>
-			</div>
+					<script>
+						//jQuery("#dv_evaldoc").modal();
+					</script>
+					</div>
 			<div class="col-md-2 col-lg-2 hidden-xs hidden-sm"></div>
 		</div>
 	</div>
-
 	<!-- Versi&oacute;n 1.6 25/09/2018 Editado por: Manuel Villalba / AyRE -->
 <footer class="footerUM">
     <div class="container">
@@ -656,42 +997,110 @@
 		
 		return false; // prevent further bubbling of event
 	}
-</script><div id="divCertifico" class="modal fade" role="dialog" style="display: none;">
-		<div class="modal-dialog">
-			<div class="modal-content" style="padding: 10px;">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">×</button>
-					<h4 class="modal-title">Tenga cuidado!</h4>
-				</div>
-				Realice sus consultas sólo desde su computador personal, desde su
-				casa u oficina.<br>
-				<br> En algunos sitios públicos delincuentes están instalando
-				programas para obtener sus claves y realizar posteriormente accesos
-				fraudulentos a su cuenta.<br>
-				<br>
-				<table border="0" cellpadding="0" cellspacing="0" width="100%">
-					<tbody><tr valign="top">
-						<td align="center" height="70">Certifico estar en un
-							computador seguro. <br>
-						<br>
-							<button class="btn btn-success" type="button" onclick="certifico(1);">CERTIFICO</button>
-							<button class="btn btn-danger" type="button" onclick="certifico(2);">NO CERTIFICO</button>
-						</td>
-					</tr>
-				</tbody></table>
-			</div>
-		</div>
-	</div>	
+</script><script type="text/javascript"> var strUrl = "http://admisiones.unimagdalena.edu.co/estudiantes/fotoEst/upload/";		
+		jQuery(document).ready(function(){
+			
+			abrirPop();
+			var ele = '';	
+			jQuery('#selectEPS').change(function() {
+				ele = jQuery('#selectEPS').val();
 
-	<script type="text/javascript">		
-	
-	maeObj = new ayreMaeAjax();
+				if (ele == '-'){				
+					jQuery("#sndEps").attr('disabled','disabled');
+				}else{
+					jQuery("#sndEps").removeAttr('disabled');				
+				}
+			});	
+			
+			jQuery("#vrAnoml").click(function(){			
+				if(jQuery("#varAnom").val() != "-"){
+					jQuery("#tblInfoAnomalia").slideToggle("slow");				
+				}else{				
+					jQuery("#loadCA").html("<img src='/imagenes/loading2.gif'>");
+					jQuery.ajax({
+						url : 'ajaxPages/anomaliasEstudiante.jsp',		        
+						type:'POST',
+						data : {
+							codEst : 2024220010
+						},
+						success : function(datos) {
+							jQuery("#varAnom").val("ok");
+							jQuery("#contentAnomalias").empty();
+							jQuery("#contentAnomalias").html(datos);
+							jQuery("#tblInfoAnomalia").slideToggle("slow");
+							jQuery("#loadCA").empty();
+						}
+					});	
+				}
+				
+			});
+			
+			jQuery("#vrEstAct").click(function(){			
+				if(jQuery("#varAcad").val() != "-"){
+					jQuery("#tblInfoEstado").slideToggle("slow");			
+				}else{
+					jQuery("#loadDA").html("<img src='/imagenes/loading2.gif'>");
+					jQuery.ajax({
+						url : 'ajaxPages/estadoEstudiante.jsp',
+						type:'POST',
+						data : {
+							codEst : 2024220010
+						},
+						success : function(datos) {
+							jQuery("#varAcad").val("ok");
+							jQuery("#contentDatAcademico").empty();
+							jQuery("#contentDatAcademico").html(datos); 
+							jQuery("#tblInfoEstado").slideToggle("slow");
+							jQuery("html, body").animate({ scrollTop: jQuery(document).height()-400 }, 500);
+							jQuery("#loadDA").empty();
+						}
+					});	
+				}
+				
+			});
+			
+		});
+		
+		jQuery(function() {
+			jQuery('#sndEps').click(function() {
+				validarEps(2024220010);
+			});
+		});		
+		
+		function abrirPop() {
+			jQuery('#overlay2').fadeIn('fast', function() {
+				jQuery('#box2').animate({'top' : '160px'}, 500);
+			});
+			
+		}		
+		
+		function imagenCargada(objImg){
+			if(objImg.width<objImg.height)
+				objImg.style.marginLeft='0%';
+		}
+		
+		function enviarOpinion(){
+			var seleccion = jQuery("input[name='liquidacion']:checked").val();		
+			if(seleccion!=undefined){
+				document.getElementById("loadOp").innerHTML =  "<img src='/imagenes/loading2.gif' width='23px'>";
+			jQuery.ajax({
+				url : 'ajaxPages/guardarOpinionLiq.jsp',		        
+				type:'POST',
+				data: 'seleccion='+seleccion,
+				success : function(datos) {				
+					document.getElementById("loadOp").innerHTML = datos;
+				}
+			});
+			}else{
+				document.getElementById("loadOp").innerHTML +=  "<div class='alert alert-danger'>Para guardar debe seleccionar una de las dos opciones.</div>";
+			}
+		}		
 	</script>
 
 
-<script id="f5_cspm">(function(){var f5_cspm={f5_p:'IFBKGBIIMKCFAJIJINLMACIFNOLCNPLKPIGCIDIMBDMBHLJCIEDOEGMBBBFAPIBIDELGGPKMOBHGOPPMAPEFEHPJLJCNPNHLIFPBJHNOLFKCBDIECLJHBGIDHDPHMBJJ',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,32,(latency>>8));str=f5_cspm.set_byte(str,33,(latency&0xff));str=f5_cspm.set_byte(str,27,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0660748585aaaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'GKNKGAOGEGNOPPCDBHPHMGCNOGBODEODKMPIOICHBEEBFGILDEENFNKABAGAFDAGCHDGGGJOFJNMMJPHALOGMOGCHICGDBJEHPPGHCNNGKFMANAFGOBMMMMOMBJBFJON',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,32,(latency>>8));str=f5_cspm.set_byte(str,33,(latency&0xff));str=f5_cspm.set_byte(str,27,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0660748585aaaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
 return;}}
 catch(err){return;}
 setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
 {var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
-f5_cspm.go();}());</script></body></html>
+f5_cspm.go();}());</script></c:set></body></html>
